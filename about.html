@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Dr. [Name] – Orthopedic Spine Surgeon</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+  <!-- NAVBAR -->
+ <!-- NAVBAR -->
+<header
+  class="bg-[#039BE5]/15 backdrop-blur shadow-sm border-b border-[#039BE5]/20 sticky top-0 z-50"
+  id="navbar"
+>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- LOGO + NAME -->
+      <a href="index.html" class="flex items-center gap-3">
+
+        <!-- LOGO (hover scale) -->
+        <img
+          src="images/logo2.png"
+          alt="Logo"
+          class="w-10 h-10 object-contain transition-transform duration-200 hover:scale-125"
+        />
+
+        <!-- NAME + SUBTITLE (group hover scale) -->
+        <div class="transition-transform duration-200 hover:scale-110">
+          <p class="text-[15px] font-bold leading-tight">
+            Dr. Jay Deep Ghosh
+          </p>
+          <p class="text-[12px] text-slate-600 -mt-1">
+            Orthopedic Spine Surgeon
+          </p>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAV -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a
+          href="about.html"
+          class="hover:text-[#039BE5] transition-transform duration-150 hover:scale-110 inline-block"
+        >About</a>
+
+        <a
+          href="procedures.html"
+          class="hover:text-[#039BE5] transition-transform duration-150 hover:scale-110 inline-block"
+        >Procedures</a>
+
+        <a
+          href="before-after.html"
+          class="hover:text-[#039BE5] transition-transform duration-150 hover:scale-110 inline-block"
+        >Before/After</a>
+
+        <a
+          href="videos.html"
+          class="hover:text-[#039BE5] transition-transform duration-150 hover:scale-110 inline-block"
+        >Videos</a>
+
+        <a
+          href="testimonials.html"
+          class="hover:text-[#039BE5] transition-transform duration-150 hover:scale-110 inline-block"
+        >Testimonials</a>
+
+        <a
+          href="book.html"
+          class="inline-flex items-center justify-center px-4 py-2 rounded-full
+                 text-sm font-semibold text-white bg-[#039BE5] hover:bg-[#0F8B63]
+                 shadow-sm transition-transform duration-200 hover:scale-110"
+        >
+          Book Consultation
+        </a>
+      </nav>
+
+      <!-- MOBILE MENU BUTTON -->
+      <button
+        id="menu-btn"
+        class="md:hidden p-2 rounded-md border border-slate-200"
+      >
+        <img src="images/menu.svg" class="w-5 h-5" alt="Menu" />
+      </button>
+
+    </div>
+  </div>
+
+  <!-- MOBILE NAV -->
+  <div id="mobile-nav" class="hidden md:hidden bg-white shadow-lg px-6 py-4">
+    <nav class="space-y-4 text-sm">
+      <a href="about.html">About</a>
+      <a href="procedures.html">Procedures</a>
+      <a href="before-after.html">Before/After</a>
+      <a href="videos.html">Videos</a>
+      <a href="testimonials.html">Testimonials</a>
+
+      <a
+        href="book.html"
+        class="w-full inline-flex items-center justify-center px-4 py-2 rounded-full
+               text-sm font-semibold text-white bg-[#039BE5] hover:bg-[#0F8B63]
+               shadow-sm transition-transform duration-200 hover:scale-110"
+      >
+        Book Consultation
+      </a>
+    </nav>
+  </div>
+</header>
+
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-b from-[#0288D1] to-[#0A7654] text-white py-10 md:py-14">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-xl" data-aos="fade-right">
+        <p class="text-xs tracking-[0.25em] uppercase text-sky-100 mb-2">
+          About
+        </p>
+        <h1 class="text-3xl sm:text-4xl font-semibold leading-tight">
+          About the Doctor
+        </h1>
+        <p class="mt-3 text-sm text-sky-50">
+          Learn more about Dr. [Name]’s experience, training, and commitment to spine care.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <!-- ABOUT MAIN SECTION WITH SPLIT BACKGROUND + HOVER ANIMATIONS -->
+<section class="py-12">
+  <div class="grid md:grid-cols-2">
+
+    <!-- LEFT SIDE (GREEN TINT BACKGROUND) -->
+    <div class="bg-[#E6FFF4] px-6 lg:px-10 py-12">
+      <div class="max-w-3xl mx-auto space-y-8">
+
+        <!-- PROFILE CARD (WITH HOVER) -->
+        <div
+          class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm p-6 
+                 transition-transform duration-200 hover:-translate-y-1 hover:shadow-md">
+          <h2 class="text-lg font-semibold mb-2">Profile</h2>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            Dr. [Full Name] is a fellowship-trained Orthopedic Spine Surgeon with
+            <strong>20+ years of clinical experience and 22,000+ successful spine surgeries</strong>
+            performed.
+          </p>
+          <p class="mt-2 text-sm text-slate-700 leading-relaxed">
+            His practice focuses on the management of degenerative spine disease, disc herniations,
+            spinal deformities, trauma, and complex revision spine surgery, with strong emphasis on
+            minimally invasive care.
+          </p>
+        </div>
+
+        <!-- QUALIFICATIONS CARD (WITH HOVER) -->
+        <div
+          class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm p-6
+                 transition-transform duration-200 hover:-translate-y-1 hover:shadow-md">
+          <h2 class="text-lg font-semibold mb-2">Qualifications & Training</h2>
+          <ul class="text-sm space-y-2 text-slate-700">
+            <li>• MBBS – [Institute Name], [Year]</li>
+            <li>• MS Orthopedics – [Institute Name], [Year]</li>
+            <li>• Fellowship in Spine Surgery – [Institute / Country], [Year]</li>
+            <li>• Advanced training in Minimally Invasive Spine Surgery – [Details]</li>
+          </ul>
+        </div>
+
+        <!-- MEMBERSHIPS CARD (WITH HOVER) -->
+        <div
+          class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm p-6
+                 transition-transform duration-200 hover:-translate-y-1 hover:shadow-md">
+          <h2 class="text-lg font-semibold mb-2">Professional Memberships</h2>
+          <ul class="text-sm space-y-2 text-slate-700">
+            <li>• Member, [National Orthopaedic Association]</li>
+            <li>• Member, [Spine Society / International Spine Society]</li>
+            <li>• Member, [Local / Regional Orthopaedic Society]</li>
+          </ul>
+        </div>
+
+        <!-- AWARDS CARD (WITH HOVER) -->
+        <div
+          class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm p-6
+                 transition-transform duration-200 hover:-translate-y-1 hover:shadow-md">
+          <h2 class="text-lg font-semibold mb-2">Awards & Recognitions</h2>
+          <ul class="text-sm space-y-2 text-slate-700">
+            <li>• [Award Name], [Organization], [Year]</li>
+            <li>• [Best Paper Award / Presentation Award], [Conference], [Year]</li>
+            <li>• [Other recognitions or contributions]</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE (BLUE TINT BACKGROUND) -->
+    <div class="bg-[#ECF7FF] px-6 lg:px-10 py-12">
+      <div class="max-w-3xl mx-auto space-y-8">
+
+        <!-- CONTACT CARD (NO HOVER) -->
+        <div class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm p-6">
+          <h2 class="text-lg font-semibold mb-2">Contact Us</h2>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            <strong>Clinic</strong><br />
+            [Clinic Name]<br />
+            [Street Address Line 1]<br />
+            [City], [State] – [PIN]
+          </p>
+
+          <p class="mt-3 text-sm">
+            <strong>Phone:</strong> +91-XXXXXXXXXX<br />
+            <strong>Email:</strong> contact@drspineclinic.com
+          </p>
+
+          <p class="mt-3 text-sm text-slate-700 leading-relaxed">
+            <strong>Consultation Hours:</strong><br />
+            Mon – Sat: 10 AM – 1 PM, 5 PM – 8 PM<br />
+            Sun: By appointment only
+          </p>
+
+          <a
+            href="book.html"
+            class="inline-flex items-center justify-center w-full mt-4 px-4 py-2 rounded-full
+                   text-sm font-semibold text-white bg-[#039BE5] hover:bg-[#0F8B63]
+                   shadow-sm transition-transform duration-200 hover:scale-110">
+            Book Consultation
+          </a>
+        </div>
+
+        <!-- MAP CARD (NO HOVER) -->
+        <div class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm p-6 overflow-hidden">
+
+          <h2 class="text-lg font-semibold mb-2">Apollo Hospitals, Guwahati</h2>
+          <p class="text-sm text-slate-700 mb-3">
+            Apollo Hospitals, Christian Basti, Guwahati, Assam – 781005
+          </p>
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3142.972211713878!2d91.7765053967896!3d26.154045300000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a59634c178b53%3A0x81381ecdd1e8f3cd!2sDr.%20Jay%20Deep%20Ghosh%20%7C%20Best%20orthopedic%20%26%20spine%20surgeon%20doctor%20in%20guwahati-assam-northeast!5e1!3m2!1sen!2sin!4v1763587797859!5m2!1sen!2sin" 
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-300 py-10 mt-0">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-10">
+      <div>
+        <h3 class="font-semibold text-sm uppercase">Dr. [Full Name]</h3>
+        <p class="text-sm mt-2 text-slate-400">
+          Spine Surgeon with 20+ years of expertise and 22,000+ surgeries.
+        </p>
+      </div>
+      <div>
+        <h4 class="font-semibold text-sm uppercase">Quick Links</h4>
+        <ul class="mt-3 space-y-1 text-sm">
+          <li><a href="about.html" class="hover:text-sky-400">About</a></li>
+          <li><a href="procedures.html" class="hover:text-sky-400">Procedures</a></li>
+          <li><a href="before-after.html" class="hover:text-sky-400">Before/After</a></li>
+          <li><a href="videos.html" class="hover:text-sky-400">Videos</a></li>
+          <li><a href="testimonials.html" class="hover:text-sky-400">Testimonials</a></li>
+          <li><a href="book.html" class="hover:text-sky-400">Book Consultation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-sm uppercase">Clinic</h4>
+        <p class="mt-3 text-sm text-slate-400">
+          [Clinic Name]<br>
+          [Street Address Line 1]<br>
+          [City], [State] – [PIN]
+        </p>
+        <p class="mt-3 text-sm text-slate-400">
+          Phone: <span class="text-slate-200 font-medium">+91-XXXXXXXXXX</span><br>
+          Email: <span class="text-slate-200 font-medium">contact@drspineclinic.com</span>
+        </p>
+      </div>
+    </div>
+    <div class="text-center text-xs text-slate-500 mt-6 border-t border-slate-800 pt-4">
+      © <span id="year"></span> Dr. [Full Name]. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/navbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Jay Deep Ghosh – Orthopedic Spine Surgeon</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-slate-900 antialiased">
+    <!-- NAVBAR -->
+    <header
+      class="bg-[#039BE5]/15 backdrop-blur shadow-sm border-b border-[#039BE5]/20 sticky top-0 z-50"
+      id="navbar"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo + Name -->
+          <a href="index.html" class="flex items-center gap-3">
+            <!-- LOGO (separate hover) -->
+            <img
+              src="images/logo2.png"
+              alt="Logo"
+              class="w-10 h-10 object-contain transition-transform duration-200 hover:scale-125"/>
+
+            <!-- NAME + TITLE (group hover) -->
+            <div
+              class="transition-transform duration-200 hover:scale-110"
+            >
+              <p class="text-[15px] font-bold leading-tight">
+                Dr. Jay Deep Ghosh
+              </p>
+              <p class="text-[12px] text-slate-600 -mt-1">
+                Orthopedic Spine Surgeon
+              </p>
+            </div>
+          </a>
+
+          <!-- Desktop Nav -->
+          <nav
+            class="hidden md:flex items-center gap-8 text-sm font-medium"
+          >
+            <a
+              href="about.html"
+              class="hover:text-[#039BE5] transition-transform duration-150 hover:scale-110 inline-block"
+              >About</a
+            >
+            <a
+              href="procedures.html"
+              class="hover:text-[#039BE5] transition-transform duration-150 hover:scale-110 inline-block"
+              >Procedures</a
+            >
+            <a
+              href="before-after.html"
+              class="hover:text-[#039BE5] transition-transform duration-150 hover:scale-110 inline-block"
+              >Before/After</a
+            >
+            <a
+              href="videos.html"
+              class="hover:text-[#039BE5] transition-transform duration-150 hover:scale-110 inline-block"
+              >Videos</a
+            >
+            <a
+              href="testimonials.html"
+              class="hover:text-[#039BE5] transition-transform duration-150 hover:scale-110 inline-block"
+              >Testimonials</a
+            >
+
+            <a
+              href="book.html"
+              class="inline-flex items-center justify-center px-4 py-2 rounded-full
+                     text-sm font-semibold text-white bg-[#039BE5] hover:bg-[#0F8B63]
+                     shadow-sm transition-transform duration-200 hover:scale-110"
+            >
+              Book Consultation
+            </a>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="menu-btn"
+            class="md:hidden p-2 rounded-md border border-slate-200"
+          >
+            <img src="images/menu.svg" class="w-5 h-5" alt="Menu" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div
+        id="mobile-nav"
+        class="hidden md:hidden bg-white shadow-lg px-6 py-4"
+      >
+        <nav class="space-y-4 text-sm">
+          <a href="about.html">About</a>
+          <a href="procedures.html">Procedures</a>
+          <a href="before-after.html">Before/After</a>
+          <a href="videos.html">Videos</a>
+          <a href="testimonials.html">Testimonials</a>
+
+          <a
+            href="book.html"
+            class="w-full inline-flex items-center justify-center px-4 py-2 rounded-full
+                   text-sm font-semibold text-white bg-[#039BE5] hover:bg-[#0F8B63]
+                   shadow-sm transition-transform duration-200 hover:scale-110"
+          >
+            Book Consultation
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section
+      class="bg-gradient-to-br from-[#039BE5] to-[#0F8B63] text-white py-16 md:py-24"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-14 items-center"
+      >
+        <!-- Text -->
+        <div data-aos="fade-right" class="space-y-6 max-w-lg">
+          <p class="text-xs tracking-[0.25em] uppercase text-white/80">
+            SPINE CARE EXCELLENCE
+          </p>
+
+          <h1 class="text-4xl md:text-5xl font-semibold leading-tight">
+            Advanced Spine Surgery<br />
+            with 20+ Years of Expertise
+          </h1>
+
+          <p class="text-sm md:text-base text-white/90">
+            Dr. Jay Deep Ghosh is a fellowship-trained Orthopedic Spine
+            Surgeon with 20+ years of experience and over 22,000 successful
+            spine surgeries.
+          </p>
+
+          <div class="flex flex-wrap gap-5 text-sm text-white/90">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-300"></span>
+              22,000+ spine surgeries
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-300"></span>
+              20+ years of experience
+            </div>
+          </div>
+
+          <a
+            href="book.html"
+            class="inline-flex items-center justify-center px-5 py-2.5 rounded-full
+                   text-sm font-semibold text-white bg-[#039BE5] hover:bg-[#0F8B63]
+                   shadow-sm transition-transform duration-200 hover:scale-110"
+          >
+            Book Consultation
+          </a>
+        </div>
+
+        <!-- Image -->
+        <div
+          class="flex justify-center md:justify-end"
+          data-aos="fade-left"
+        >
+          <div class="bg-white/90 rounded-3xl shadow-xl p-3">
+            <img
+              src="images/doc-potrait2.jpg"
+              alt="Dr. Jay Deep Ghosh"
+              class="w-64 md:w-72 h-auto rounded-2xl object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="bg-white py-12">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="bg-white rounded-2xl border border-[#039BE5]/30 shadow-sm p-8"
+          data-aos="fade-up"
+        >
+          <div class="flex items-center gap-2 mb-6">
+            <span
+              class="h-1.5 w-6 rounded-full bg-gradient-to-r from-[#039BE5] to-[#0F8B63]"
+            ></span>
+            <h2 class="text-xl font-semibold mt-1">Contact & Location</h2>
+          </div>
+
+          <div class="grid sm:grid-cols-3 gap-8 text-sm">
+            <div>
+              <p class="text-xs uppercase tracking-wide text-slate-500">
+                Phone
+              </p>
+              <p class="mt-1 font-medium">+91-XXXXXXXXXX</p>
+            </div>
+
+            <div>
+              <p class="text-xs uppercase tracking-wide text-slate-500">
+                Email
+              </p>
+              <p class="mt-1">contact@drspineclinic.com</p>
+            </div>
+
+            <div>
+              <p class="text-xs uppercase tracking-wide text-slate-500">
+                Clinic Address
+              </p>
+              <p class="mt-1 leading-relaxed">
+                [Clinic Name]<br />
+                [Address Line 1]<br />
+                [City], [State] – [PIN]
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Separator -->
+    <div
+      class="h-[2px] bg-gradient-to-r from-transparent via-[#039BE5]/20 to-transparent"
+    ></div>
+
+    <!-- ABOUT + WHY CHOOSE US -->
+    <section class="bg-[#ECF7FF] py-14 border-y border-[#039BE5]/10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- About block -->
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <span
+              class="h-1.5 w-6 rounded-full inline-block bg-gradient-to-r from-[#039BE5] to-[#0F8B63]"
+            ></span>
+            <p
+              class="text-[11px] uppercase tracking-[0.2em] mt-2 text-slate-500"
+            >
+              About
+            </p>
+            <h2 class="text-2xl font-semibold mt-3">
+              About Dr. Jay Deep Ghosh
+            </h2>
+          </div>
+
+          <a
+            href="about.html"
+            class="text-sm font-semibold text-[#039BE5] hover:text-[#0F8B63]"
+          >
+            See Full Profile →
+          </a>
+        </div>
+
+        <p
+          class="text-sm md:text-base text-slate-700 leading-relaxed max-w-2xl"
+          data-aos="fade-up"
+        >
+          Dr. Jay Deep Ghosh specializes in treating complex spinal
+          disorders using minimally invasive techniques. His approach
+          focuses on faster recovery, minimal tissue disruption, and
+          achieving long-term functional outcomes with compassionate,
+          patient-centered care.
+        </p>
+
+        <!-- Why choose us cards -->
+        <div
+          class="mt-8 grid sm:grid-cols-3 gap-5"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div
+            class="bg-white rounded-xl border border-[#039BE5]/25 shadow-sm p-4 flex flex-col gap-1 hover:-translate-y-1 hover:shadow-md transition-transform duration-200"
+          >
+            <p class="text-xs font-semibold text-[#039BE5] uppercase">
+              Experience
+            </p>
+            <p class="text-lg font-semibold text-slate-900">
+              20+ Years
+            </p>
+            <p class="text-xs text-slate-600">
+              Extensive experience in managing complex spine conditions.
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-xl border border-[#039BE5]/25 shadow-sm p-4 flex flex-col gap-1 hover:-translate-y-1 hover:shadow-md transition-transform duration-200"
+          >
+            <p class="text-xs font-semibold text-[#039BE5] uppercase">
+              Surgeries
+            </p>
+            <p class="text-lg font-semibold text-slate-900">
+              22,000+ Cases
+            </p>
+            <p class="text-xs text-slate-600">
+              Proven outcomes with a large volume of successful surgeries.
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-xl border border-[#039BE5]/25 shadow-sm p-4 flex flex-col gap-1 hover:-translate-y-1 hover:shadow-md transition-transform duration-200"
+          >
+            <p class="text-xs font-semibold text-[#039BE5] uppercase">
+              Approach
+            </p>
+            <p class="text-lg font-semibold text-slate-900">
+              Minimally Invasive
+            </p>
+            <p class="text-xs text-slate-600">
+              Focused on reduced pain, faster recovery, and early mobility.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Separator -->
+    <div
+      class="h-[2px] bg-gradient-to-r from-transparent via-[#039BE5]/20 to-transparent"
+    ></div>
+
+    <!-- PROCEDURES -->
+    <section class="bg-white py-14">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <span
+              class="h-1.5 w-6 rounded-full inline-block bg-gradient-to-r from-[#039BE5] to-[#0F8B63]"
+            ></span>
+            <p
+              class="text-[11px] uppercase tracking-[0.2em] mt-2 text-slate-500"
+            >
+              Procedures
+            </p>
+            <h2 class="text-2xl font-semibold mt-3">
+              Key Spine Procedures
+            </h2>
+          </div>
+
+          <a
+            href="procedures.html"
+            class="text-sm font-semibold text-[#039BE5] hover:text-[#0F8B63]"
+            >See All Procedures →</a
+          >
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article
+            class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm overflow-hidden hover:-translate-y-1 hover:shadow-md transition-transform duration-200"
+            data-aos="fade-up"
+          >
+            <div class="h-1.5 bg-[#039BE5]"></div>
+            <div class="p-4">
+              <h3 class="font-semibold text-sm">
+                Minimally Invasive Spine Surgery
+              </h3>
+              <p class="mt-2 text-xs text-slate-600">
+                Smaller incisions, less tissue disruption, and quicker
+                recovery times.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm overflow-hidden hover:-translate-y-1 hover:shadow-md transition-transform duration-200"
+            data-aos="fade-up"
+            data-aos-delay="50"
+          >
+            <div class="h-1.5 bg-[#039BE5]"></div>
+            <div class="p-4">
+              <h3 class="font-semibold text-sm">Spinal Fusion</h3>
+              <p class="mt-2 text-xs text-slate-600">
+                Stabilizing painful or unstable spinal segments for long-term
+                relief.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm overflow-hidden hover:-translate-y-1 hover:shadow-md transition-transform duration-200"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="h-1.5 bg-[#039BE5]"></div>
+            <div class="p-4">
+              <h3 class="font-semibold text-sm">Disc Replacement</h3>
+              <p class="mt-2 text-xs text-slate-600">
+                Motion-preserving alternative to fusion for selected patients.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Separator -->
+    <div
+      class="h-[2px] bg-gradient-to-r from-transparent via-[#039BE5]/20 to-transparent"
+    ></div>
+
+    <!-- BEFORE & AFTER -->
+    <section class="bg-[#E6FFF4] py-14">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <span
+              class="h-1.5 w-6 rounded-full inline-block bg-gradient-to-r from-[#039BE5] to-[#0F8B63]"
+            ></span>
+            <p
+              class="text-[11px] uppercase tracking-[0.2em] mt-2 text-slate-500"
+            >
+              Before & After
+            </p>
+            <h2 class="text-2xl font-semibold mt-3">
+              Before & After Results
+            </h2>
+          </div>
+
+          <a
+            href="before-after.html"
+            class="text-sm font-semibold text-[#039BE5] hover:text-[#0F8B63]"
+            >See More →</a
+          >
+        </div>
+
+        <div
+          class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm p-5"
+          data-aos="fade-up"
+        >
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- BEFORE -->
+            <div class="space-y-2">
+              <span
+                class="inline-block bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full"
+                >BEFORE</span
+              >
+              <img
+                src="images/before1.jpg"
+                alt="Spine surgery before"
+                loading="lazy"
+                class="w-full h-[360px] object-cover rounded-lg border-4 border-white shadow-md"
+              />
+            </div>
+
+            <!-- AFTER -->
+            <div class="space-y-2">
+              <span
+                class="inline-block bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full"
+                >AFTER</span
+              >
+              <img
+                src="images/after1.jpg"
+                alt="Spine surgery after"
+                loading="lazy"
+                class="w-full h-[360px] object-cover rounded-lg border-4 border-white shadow-md"
+              />
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <p class="font-semibold text-sm text-slate-800">
+              Lumbar Disc Herniation – Post Surgery
+            </p>
+            <p class="text-xs text-slate-600">
+              Significant pain relief and restored mobility within weeks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Separator -->
+    <div
+      class="h-[2px] bg-gradient-to-r from-transparent via-[#039BE5]/20 to-transparent"
+    ></div>
+
+    <!-- VIDEOS -->
+    <section class="bg-white py-14">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <span
+              class="h-1.5 w-6 rounded-full inline-block bg-gradient-to-r from-[#039BE5] to-[#0F8B63]"
+            ></span>
+            <p
+              class="text-[11px] uppercase tracking-[0.2em] mt-2 text-slate-500"
+            >
+              Videos
+            </p>
+            <h2 class="text-2xl font-semibold mt-3">
+              Educational Videos
+            </h2>
+          </div>
+
+          <a
+            href="videos.html"
+            class="text-sm font-semibold text-[#039BE5] hover:text-[#0F8B63]"
+            >See More →</a
+          >
+        </div>
+
+        <div
+          class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm p-5"
+          data-aos="fade-up"
+        >
+          <img
+            src="images/video-thumb.jpg"
+            alt="Lumbar Disc Herniation video"
+            loading="lazy"
+            class="w-full rounded-xl border border-slate-200"
+          />
+          <p class="font-semibold text-sm mt-3">
+            Understanding Lumbar Disc Herniation
+          </p>
+          <p class="text-xs text-slate-600 max-w-2xl">
+            Explained in simple language with visual references to help
+            patients and families understand the condition and treatment
+            options.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Separator -->
+    <div
+      class="h-[2px] bg-gradient-to-r from-transparent via-[#039BE5]/20 to-transparent"
+    ></div>
+
+    <!-- TESTIMONIALS -->
+    <section class="bg-[#ECF7FF] py-14">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <span
+              class="h-1.5 w-6 rounded-full inline-block bg-gradient-to-r from-[#039BE5] to-[#0F8B63]"
+            ></span>
+            <p
+              class="text-[11px] uppercase tracking-[0.2em] mt-2 text-slate-500"
+            >
+              Testimonials
+            </p>
+            <h2 class="text-2xl font-semibold mt-3">
+              Patient Testimonials
+            </h2>
+          </div>
+
+          <a
+            href="testimonials.html"
+            class="text-sm font-semibold text-[#039BE5] hover:text-[#0F8B63]"
+            >See More →</a
+          >
+        </div>
+
+        <div
+          class="grid md:grid-cols-3 gap-5"
+          data-aos="fade-up"
+        >
+          <!-- Testimonial 1 -->
+          <div
+            class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm p-5"
+          >
+            <p class="font-semibold text-sm">Mr. A.K., 54 yrs</p>
+            <p class="text-xs text-slate-500">Lumbar Disc Herniation</p>
+            <p class="mt-3 text-sm text-slate-700 leading-relaxed">
+              “After the surgery, I was walking normally within weeks. The
+              pain that lasted years disappeared.”
+            </p>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm p-5"
+          >
+            <p class="font-semibold text-sm">Mrs. S.M., 62 yrs</p>
+            <p class="text-xs text-slate-500">Spinal Stenosis</p>
+            <p class="mt-3 text-sm text-slate-700 leading-relaxed">
+              “I was unable to walk more than a few steps. Now I can manage
+              my daily activities comfortably without constant pain.”
+            </p>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div
+            class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm p-5"
+          >
+            <p class="font-semibold text-sm">Mr. R.D., 38 yrs</p>
+            <p class="text-xs text-slate-500">Disc Prolapse</p>
+            <p class="mt-3 text-sm text-slate-700 leading-relaxed">
+              “Minimally invasive surgery helped me return to work quickly.
+              The team guided me through every step of recovery.”
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLOATING MOBILE CTA -->
+    <a
+      href="book.html"
+      class="fixed bottom-5 right-4 md:hidden inline-flex items-center justify-center px-4 py-2.5 rounded-full
+             text-sm font-semibold text-white bg-[#039BE5] hover:bg-[#0F8B63] shadow-lg
+             transition-transform duration-200 hover:scale-110"
+    >
+      Book Consultation
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-300 py-12 mt-10">
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-3 gap-10"
+      >
+        <div>
+          <h3 class="text-white font-semibold text-lg">
+            Dr. Jay Deep Ghosh
+          </h3>
+          <p class="text-sm mt-2 leading-relaxed">
+            Spine Surgeon with 20+ years of expertise and 22,000+ surgeries.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold mb-3">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="hover:text-white">About</a></li>
+            <li>
+              <a href="procedures.html" class="hover:text-white"
+                >Procedures</a
+              >
+            </li>
+            <li>
+              <a href="before-after.html" class="hover:text-white"
+                >Before/After</a
+              >
+            </li>
+            <li>
+              <a href="videos.html" class="hover:text-white">Videos</a>
+            </li>
+            <li>
+              <a href="testimonials.html" class="hover:text-white"
+                >Testimonials</a
+              >
+            </li>
+            <li>
+              <a href="book.html" class="hover:text-white"
+                >Book Consultation</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold mb-3">Clinic</h4>
+          <p class="text-sm leading-relaxed">
+            [Clinic Name]<br />
+            [Street Address Line 1]<br />
+            [City], [State] – [PIN]
+          </p>
+
+          <p class="text-sm mt-3">Phone: +91-XXXXXXXXXX</p>
+          <p class="text-sm">Email: contact@drspineclinic.com</p>
+        </div>
+      </div>
+
+      <div class="text-center text-xs text-slate-500 mt-10">
+        © Dr. Jay Deep Ghosh. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+      AOS.init();
+      document.getElementById("menu-btn").onclick = () =>
+        document.getElementById("mobile-nav").classList.toggle("hidden");
+    </script>
+  </body>
+</html>

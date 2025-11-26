@@ -1,0 +1,8 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+}
+
+/* JS uses this class to show/hide errors */
+.error-msg {
+  display: none;
+}
