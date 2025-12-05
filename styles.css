@@ -1,0 +1,1540 @@
+/* ============================================
+   THEME COLORS — Dr Jay Deep Ghosh Website (CLINICAL THEME - REVISED)
+   Palette: Medical Blue #004C99, Surgical Green #00A896, White #FFFFFF
+   ============================================ */
+:root {
+  --brand-blue: #004C99;     /* Primary Accent (Medical Blue Gown) */
+  --brand-green: #00A896;    /* Secondary Accent (Surgical Green Gown) */
+  --brand-light: #F0F0F0;    /* Light Clinical Gray (Alt Background) */
+  --brand-light-blue: #B7E4C7; /* 🆕 NEW: Custom Light Blue Background */
+
+  --bg: #FFFFFF;             /* Clinical White (Main Background) */
+  --ink: #333333;            /* Dark Text (High Readability) */
+  --muted: #6b7280;          /* Standard Muted Gray */
+  --light: #FFFFFF;          /* Pure White */
+
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(0,0,0,.1); /* Light shadow for contrast on white BG */
+  --container: 1120px;
+  
+  /* 🔑 Placeholder for Doctor Section BG Image (Used in the About section) */
+  --doctor-about-bg: url('assets/withpatients12.jpg'); 
+
+  /* 🆕 NEW: Background for the Advanced Procedures section */
+  --procedures-bg: url('assets/surgery9.jpg');
+
+ /* 🆕 NEW: Tweakable opacity control for the procedures section background overlay */
+  --procedures-overlay-opacity: 0.5; 
+
+  /* 🆕 NEW: Testimonial Section Variables */
+--testi-bg: url('assets/background2.jpg'); /* 🎯 REPLACE: Set your image URL here */
+--testi-bg-opacity: 0.5; /* 🎯 MANUAL CONTROL: Adjust this value (0.01 to 1) for desired opacity */
+
+/* 🆕 NEW: Shared Background for Alternating Sections */
+--shared-section-bg: url('assets/background3.jpg'); /* 🎯 REPLACE: Set your image URL here */
+--shared-bg-opacity: 0.05; /* 🎯 MANUAL CONTROL: Adjust for subtlety (0.01 to 0.1 is usually best) */
+
+}
+
+/* ============================================
+   BASE
+   ============================================ */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink); /* Dark text on light background */
+  background: var(--bg); /* Clinical White background */
+  line-height: 1.6;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+.container {
+  width: min(100%, var(--container));
+  margin-inline: auto;
+  padding: 0 16px;
+}
+
+.center { text-align: center; }
+.mt-8 { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
+.rounded { border-radius: var(--radius); }
+
+.flex { display: flex; }
+.align-center { align-items: center; }
+.space-between { justify-content: space-between; }
+
+.grid { display: grid; gap: 24px; }
+.grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.stack-on-mobile { grid-template-columns: 1fr; }
+
+/* ============================================
+   BUTTONS (CLINICAL THEME - REFINED CONTRAST)
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: 1rem 1.4rem; /* Larger Button Size */
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .25s;
+}
+.btn--sm { padding: .45rem .8rem; font-size: .9rem; }
+
+/* Solid button uses SURGICAL GREEN (Primary CTA - for page content) */
+.btn--accent {
+  background: var(--brand-green);
+  color: var(--light); /* White Text */
+  border-color: var(--brand-green);
+}
+.btn--accent:hover {
+  background: var(--brand-blue); /* Hover is Medical Blue */
+  border-color: var(--brand-blue);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+/* 🔑 NEW: Solid Button Contrast (for use in the dark Nav Bar) */
+.btn--accent-contrast {
+    background: var(--brand-green) !important;
+    color: var(--light) !important;
+    border-color: var(--brand-green) !important;
+}
+.btn--accent-contrast:hover {
+    background: var(--brand-blue) !important;
+    border-color: var(--brand-blue) !important;
+}
+
+
+/* Ghost button uses MEDICAL BLUE (Secondary CTA - for page content) */
+.btn--ghost {
+  background: transparent;
+  border: 2px solid var(--brand-blue); /* Blue Border */
+  color: var(--brand-blue); /* Blue Text */
+}
+.btn--ghost:hover {
+  background: var(--brand-light); /* Light Gray background on hover */
+  border-color: var(--brand-blue);
+  color: var(--brand-blue);
+}
+
+/* 🔑 NEW: Ghost Button Contrast (for use in the dark Nav Bar) */
+.btn--ghost-contrast {
+    background: var(--light) !important; /* White BG */
+    border: 2px solid var(--brand-green) !important; /* Green Border */
+    color: var(--brand-green) !important; /* Green Text */
+}
+.btn--ghost-contrast:hover {
+    background: var(--brand-green) !important; /* Solid Green BG on hover */
+    border-color: var(--brand-green) !important;
+    color: var(--light) !important; /* White Text on hover */
+}
+
+.btn--light {
+  border-color: rgba(255,255,255,.5);
+  color: #fff;
+}
+.w-100 { width: 100%; }
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  position: relative;
+}
+.hero__slide {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: var(--bg);
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: var(--brand-blue); /* Blue Fallback */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.hero__slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: left;
+}
+.hero__content h1 {
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.15;
+  margin: 0 0 10px;
+}
+.hero__content p {
+  max-width: 720px;
+  opacity: .95;
+  margin: 0 0 14px;
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+.section { 
+    padding: 64px 0; 
+    background: var(--bg); /* Default section is Clinical White */
+    color: var(--ink);
+}
+
+/* 🔑 Alternating section is simple Light Clinical Gray */
+.section--alt { 
+    background: var(--brand-light); 
+    color: var(--ink);
+    position: static; 
+    isolation: auto;
+}
+.section--alt::before {
+    content: none; 
+}
+
+.section--tight { padding: 40px 0; }
+
+.section__title {
+  font-size: clamp(30px, 4.2vw, 48px);
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: var(--brand-blue);
+}
+.section__subtitle {
+  color: var(--muted);
+  margin: 0 0 28px;
+}
+/* ===========================================
+   SECTION BACKGROUND OVERRIDES (For Visual Rhythm)
+   =========================================== */
+
+/* Areas of Care: Set to Light Clinical Gray, so the white cards pop */
+/*#patientcare {
+    background: var(--brand-light-blue); 
+}
+*/
+/* ===========================================
+   ADVANCED PROCEDURES BACKGROUND IMAGE - SOFTENED
+   =========================================== */
+
+/* ===========================================
+   ADVANCED PROCEDURES BACKGROUND IMAGE - SOFTENED (VARIABLE OPACITY)
+=========================================== */
+
+#advanced-procedures {
+    background-image: var(--procedures-bg); 
+    background-size: cover;
+    background-attachment: fixed; /* Keep the parallax effect */
+    background-position: center;
+    position: relative;
+    z-index: 1; 
+    
+    /* Primary text color must be dark for contrast against the light overlay */
+    color: var(--ink); 
+}
+
+/* Light White Overlay using the Tweakable Variable */
+#advanced-procedures::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 🔑 KEY CHANGE: USING THE VARIABLE HERE */
+    background: rgba(255, 255, 255, var(--procedures-overlay-opacity)); 
+    z-index: -1;
+}
+
+/* TWEAK: Make the introductory text darker and less faded */
+#advanced-procedures .section__subtitle {
+    color: var(--ink); 
+    font-weight: 500; /* Bolder than the default 400 */
+    /* Ensure line height is good */
+    line-height: 1.6;
+}
+/* Ensure the main container content sits above the overlay */
+#advanced-procedures .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+.h1 { font-size: clamp(24px, 3.6vw, 40px); margin: 0 0 12px; }
+.media-cover { height: 420px; object-fit: cover; }
+
+
+.icon-circle {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--brand-light);
+  margin: 0 auto 10px;
+}
+
+/* ===========================================
+   CUSTOM INLINE SVG ICON STYLING
+   (Ensures uniform size and brand color)
+   =========================================== */
+.icon-circle svg.custom-icon {
+    /* Sets the uniform size of the icon (adjust 40px as needed) */
+    width: 50px; 
+    height: 50px;
+    
+    /* Forces the SVG's primary fill color to your brand blue */
+    fill: var(--brand-blue); 
+    
+    /* Ensures no stroke/outline color conflicts */
+    stroke: none; 
+}
+
+
+.section--image {
+  position: relative;
+  isolation: isolate;
+  color: var(--ink);
+}
+.section--image .section__image {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 48%;
+  z-index: -1;
+  background: var(--brand-blue);
+  background-image: var(--img);
+  background-size: cover;
+  background-position: center;
+  opacity: .15;
+}
+.bullet-grid { margin: 0; padding-left: 18px; }
+.bullet-grid li { margin: .4rem 0; }
+
+/* ============================================
+   DOCTOR HIGHLIGHT SECTION (BRIGHT, CENTERED, HIGH CONTRAST)
+   ============================================ */
+.section--doctor-about {
+    position: relative;
+    isolation: isolate; 
+    padding: 64px 0; 
+    
+    background-image: var(--doctor-about-bg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll; 
+    background-color: var(--bg); 
+    
+    /* 🔑 FIX: Enforce center alignment for all text content and inline blocks */
+    text-align: center;
+}
+
+.section--doctor-about::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--bg); 
+    /* 🔑 FIX: Changed opacity from 0.98 to 0.8 to make background image more visible */
+    opacity: 0.65; 
+    z-index: -1;
+}
+
+/* Ensure content container is centered and has a max width */
+.doctor-bio-content {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.doctor-photo-wrap {
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0; 
+    max-width: 100%;
+    margin: 0; 
+}
+
+.doctor-highlight-img {
+    height: 480px; 
+    width: 100%;
+    object-fit: cover; 
+    object-position: top center; 
+    border-radius: 0;
+    vertical-align: middle;
+}
+
+/* 🔑 DOCTOR NAME: BIGGER, BOLDER, BRIGHTER */
+.section__title-small {
+    font-size: clamp(32px, 4.5vw, 48px); 
+    margin: 0 0 4px;
+    font-weight: 900; 
+    line-height: 1.1; 
+    color: var(--brand-blue);
+    /* HIGH CONTRAST: Subtle dark shadow for maximum lift and brightness */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* 🔑 DESIGNATION */
+.muted-h3 {
+    font-size: clamp(19px, 2.3vw, 21px); 
+    margin: 0 0 28px; 
+    font-weight: 500;
+    color: var(--muted);
+} 
+
+/* 🔑 BIO PARAGRAPH: OPTIMIZED READABILITY & CENTERING FIX */
+.doctor-bio-content p:not(.stat-sub) {
+    font-size: 17px; 
+    line-height: 1.8; 
+    margin-bottom: 24px;
+    text-shadow: 0 0 0.5px rgba(0, 0, 0, 0.1); 
+    
+    /* FIX: Set max-width and auto margins to center the block */
+    max-width: 650px; 
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
+/* 🔑 AREAS OF EXPERTISE: CENTERED, BOLD, AND VISIBLE */
+.expertise-title {
+    font-size: 1.4rem; 
+    font-weight: 700;
+    color: var(--brand-blue);
+    border-bottom: 3px solid var(--brand-green); 
+    width: fit-content;
+    /* Centered */
+    margin: 32px auto 24px; 
+    padding-bottom: 6px;
+    letter-spacing: 0.08em; 
+}
+
+/* 🔑 AREAS OF EXPERTISE: TIGHTER SPACING & FORCED GRID */
+.expertise-list {
+    list-style: none;
+    padding-left: 0;
+    max-width: 600px; 
+    margin: 0 auto 24px !important; /* Slightly reduce bottom margin */
+
+    /* 🔑 FIX: Implement CSS Grid here for column layout and tight vertical spacing */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 40px; /* Remove horizontal gap between items */
+    row-gap: 12px; /* Control vertical line spacing */
+}
+.expertise-list li {
+    text-align: left; 
+    color: var(--ink); 
+    font-size: 1.15rem; 
+    font-weight: 600; 
+    margin: 0; /* Ensures no default margin is applied */
+    padding: 0; /* Removes padding, relying only on the 8px row-gap */
+    display: flex;
+    align-items: center; 
+}
+
+/* 🔑 PURE CSS DOT BULLET (High Contrast Green) */
+.expertise-list li::before {
+    content: ""; 
+    display: inline-block;
+    width: 10px; 
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--brand-green); 
+    margin-right: 12px; 
+    flex-shrink: 0; 
+}
+
+
+/* 🔑 BUTTONS: Ensure centering */
+.doctor-bio-content .d-flex {
+    /* FIX: Override default flex alignment to center the buttons horizontally */
+    justify-content: center !important;
+}
+
+.d-flex.gap-2 {
+  gap: 0.5rem; 
+}
+.doctor-bio-content .d-flex a.btn {
+    flex-grow: 0; 
+    font-size: 18px;
+    padding: 1rem 1.75rem;
+    white-space: nowrap;
+}
+
+/* Stats Cards Styling (Minimized Area & Clinical Design) */
+.quick-stats {
+    padding-top: 0;
+    gap: 16px; 
+    margin-top: 20px;
+}
+
+/* 🔑 STATS CARD FIX: More transparent background, border removed */
+.stat-card {
+    position: relative;
+    text-align: center;
+    padding: 16px 10px;
+    
+    /* FIX: More transparent background, blending with the image overlay */
+    background-color: rgba(255, 255, 255, 0.45); 
+    border: 1px solid rgba(0, 76, 153, 0.1); /* Very light, faint border */
+    border-radius: var(--radius); 
+    
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    overflow: hidden;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔑 ACCENT BAR FIX: Changed to Medical Blue */
+.stat-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px; /* Accent bar width */
+    /* FIX: Changed color to Medical Blue */
+    background-color: var(--brand-blue); 
+    height: 100%;
+}
+
+
+.stat-main {
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 800; 
+    color: var(--brand-blue);
+    margin: 0 0 2px;
+    padding-left: 8px; /* Offset text from accent bar */
+}
+.stat-sub {
+    font-size: 14px; 
+    color: var(--ink);
+    opacity: 0.95;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 500;
+    padding-left: 8px; /* Offset text from accent bar */
+}
+
+
+@media (max-width: 991px) {
+    .doctor-highlight-img {
+        height: 380px; 
+    }
+    /* Fix for button stacking on mobile: d-flex needs to change direction */
+    .doctor-bio-content .d-flex {
+        flex-direction: column !important;
+        gap: 16px;
+    }
+    .doctor-bio-content .d-flex a.btn {
+        width: 100%; /* Force buttons to full width on mobile */
+    }
+}
+@media (max-width: 720px) {
+    .doctor-highlight-img {
+        height: 300px; 
+    }
+    .doctor-bio-content {
+        margin-top: 0;
+    }
+    /* Ensure stat cards stack correctly */
+    .quick-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   PANELS (DO’S & DON’TS)
+   ============================================ */
+.panel {
+  background: var(--brand-blue);
+  color: var(--light);
+  border-radius: 20px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.panel--inverse {
+  background: var(--brand-green);
+  color: var(--light);
+}
+.panel__list { margin: 0 0 14px; padding-left: 18px; }
+.panel .btn--light:hover { background: rgba(255,255,255,.1); }
+
+/* ============================================
+   GALLERY
+   ============================================ */
+.gallery .ba {
+  background: var(--light);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.gallery figcaption {
+  padding: 10px 12px;
+  color: var(--brand-blue);
+  background: var(--brand-light); 
+}
+
+/* ============================================
+   VIDEOS
+   ============================================ */
+.video-grid .video {
+  aspect-ratio: 16/9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.video-grid iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ============================================
+   REVIEW / QR SECTION
+   ============================================ */
+.section--review {
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-green));
+  color: #fff;
+}
+.review {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+.idcard img {
+  border: 4px solid var(--light);
+}
+.review__qr img {
+  width: 220px;
+  height: 220px;
+  border: 8px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+/* ============================================
+   TESTIMONIALS
+   ============================================ */
+.section--overlay {
+  background: url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1600&auto=format&fit=cover') center/cover fixed;
+  position: relative;
+}
+.section--overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 76, 153, 0.9);
+}
+
+/* ============================================
+   SHARE
+   ============================================ */
+.socials a {
+  border: 1px solid var(--brand-blue);
+  color: var(--brand-blue);
+}
+.socials a:hover {
+  background: var(--brand-blue);
+  color: #fff;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  background: var(--brand-blue);
+  color: var(--light);
+}
+.foot-badge {
+  color: var(--brand-green);
+}
+
+.footer__bottom {
+  border-top: 1px solid rgba(255,255,255,.2);
+  padding: 12px 0;
+  background: #003873;
+}
+
+/* ============================================
+   RESPONSIVE BASE
+   ============================================ */
+@media (max-width: 1024px) {
+  .section--image .section__image { display: none; }
+}
+@media (max-width: 860px) {
+  .grid--3 { grid-template-columns: 1fr 1fr; }
+  .review { grid-template-columns: 1fr; }
+  .review__qr { justify-self: center; }
+}
+@media (max-width: 720px) {
+  .grid--2 { grid-template-columns: 1fr; }
+  .grid--3 { grid-template-columns: 1fr; }
+  .media-cover { height: 300px; }
+  .hero__slide { min-height: 56vh; }
+}
+
+
+/* ============================================
+   RIBBON HEADER (FINAL)
+   ============================================ */
+
+/* 1. The Container Bar */
+.ribbon-header {
+  background-color: var(--brand-blue);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+  padding: 0; 
+  transition: all 0.3s ease;
+}
+
+/* 2. The Logo (Left) */
+.ribbon-logo {
+  filter: brightness(1.5); /* Lighten the logo for contrast */
+  height: 55px;
+  width: auto;
+  object-fit: contain;
+  margin-right: 8px; /* Adjusted spacing */
+}
+
+/* NEW: Nav Title Styling */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-title-wrap {
+    line-height: 1.1; 
+    color: var(--light);
+}
+
+.navbar-title {
+    font-size: 17px;
+    font-weight: 800; 
+    margin: 0;
+    text-transform: uppercase; 
+}
+
+.navbar-subtitle {
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0;
+    font-style: italic; 
+    color: var(--light); 
+    opacity: 0.9;
+}
+
+
+/* 3. The Navigation (Centered) */
+.navbar-nav { 
+  margin-left: auto !important; 
+  margin-right: auto !important; 
+  justify-content: center;
+  gap: 2px;
+}
+
+.navbar-nav .nav-link { 
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--light) !important; 
+  padding: 10px 18px !important;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  display: flex; 
+  align-items: center;
+  gap: 6px; 
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--brand-green) !important; 
+  background-color: rgba(255, 255, 255, 0.1); 
+}
+
+/* 4. The Button (Right) - Now using the contrast styles */
+.btn-appointment {
+    background: var(--brand-green) !important;
+    color: var(--light) !important;
+    border-color: var(--brand-green) !important;
+    border-radius: 50px;
+    padding: 12px 28px; 
+    font-weight: 600;
+    font-size: 14px;
+    white-space: nowrap;
+}
+.btn--ghost-contrast {
+    background: var(--light) !important; 
+    border: 2px solid var(--brand-green) !important; 
+    color: var(--brand-green) !important; 
+}
+
+.btn-appointment:hover {
+    background: var(--brand-blue) !important;
+    border-color: var(--brand-blue) !important;
+}
+
+
+/* ============================================
+   MOBILE HEADER ADJUSTMENTS
+   ============================================ */
+@media (max-width: 991px) {
+  body {
+    padding-top: 80px; 
+  }
+
+  /* Reduce font size of title on small screens */
+  .navbar-title {
+      font-size: 16px;
+  }
+  .navbar-subtitle {
+      font-size: 12px;
+  }
+
+  .ribbon-logo {
+    height: 45px;
+  }
+
+  /* Use the dark blue BG for mobile menu */
+  .navbar-collapse {
+    background: var(--brand-blue); 
+    padding: 20px;
+    margin-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 0 0 12px 12px;
+  }
+  
+  .header-action {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .btn-appointment {
+    width: 100%; 
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 90px;
+  }
+}
+
+/* ============================================
+   PATIENT CARE EXPANDABLE CARDS (Areas of Care)
+   ============================================ */
+   
+/* This is the container holding the three cards */
+.expandable-cards-container {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+    gap: 30px; 
+    margin-top: 30px;
+    
+    /* 🔑 THE FIX: Prevents cards from stretching to the tallest height */
+    align-items: start; 
+}
+
+/* Ensure mobile stacking still works (Add this if you don't have it) */
+@media (max-width: 991px) {
+    .expandable-cards-container {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+        gap: 20px;
+    }
+}
+
+/* Individual Card Styling */
+.expandable-card {
+    background: var(--light);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden; 
+    cursor: pointer; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s;
+    border: 1px solid transparent; 
+}
+
+/* Enhanced Hover Effect */
+.expandable-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+/* Header Content (Icon + Title + Summary) */
+.card-header-content {
+    padding: 30px 24px;
+    text-align: center;
+    position: relative;
+    background: #fff;
+    z-index: 2;
+    border-bottom: 2px solid var(--brand-light); /* Softer separator line */
+    transition: border-bottom-color 0.3s, background-color 0.3s;
+}
+
+.card-header-content h3 {
+    margin: 15px 0 10px;
+    color: var(--brand-blue);
+    font-size: 1.5rem;
+    font-weight: 700; /* TWEAK: Make title bolder */
+}
+
+.summary-text {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-bottom: 20px;
+    line-height: 1.6; /* TWEAK: Better line spacing */
+}
+
+/* Icon Hover & Transition */
+.expandable-card:hover .icon-circle {
+    background: var(--brand-blue); 
+}
+.expandable-card:hover .icon-circle svg.custom-icon {
+    fill: var(--light) !important;
+}
+
+/* Chevron Icon styling */
+.chevron {
+    display: inline-block;
+    color: var(--brand-green);
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+/* CONTENT PANEL (Initially Hidden) */
+.expandable-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: var(--light); /* Ensure content background is white for clean contrast */
+    transition: max-height 0.4s ease-out, padding 0.4s ease;
+    border-top: 1px solid rgba(0, 0, 0, 0.05); /* Lighter separator line */
+}
+
+.procedure-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    padding: 0 24px;
+}
+
+.procedure-list li {
+    padding: 8px 0;
+    border-bottom: 1px dotted #e0e0e0; /* Softer dotted line */
+    font-size: 0.95rem;
+    color: var(--ink);
+    position: relative;
+    padding-left: 15px;
+    font-weight: 500; 
+    line-height: 1.7; /* TWEAK: Better line spacing for readability */
+}
+
+.procedure-list li::before {
+    content: "•";
+    color: var(--brand-green);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    margin-right: 5px; 
+    font-size: 1.2rem; /* TWEAK: Larger bullet point */
+}
+
+.procedure-list li:last-child {
+    border-bottom: none;
+}
+
+/* === ACTIVE STATE (Open Card) === */
+
+.expandable-card.active {
+    box-shadow: 0 0 0 3px var(--brand-green); 
+    border-color: var(--brand-green);
+}
+
+/* TWEAK: Subtle blue background on active header */
+.expandable-card.active .card-header-content {
+    background-color: #F7F8FC; 
+    border-bottom-color: transparent; 
+}
+
+.expandable-card.active .icon-circle {
+    background: var(--brand-green); 
+}
+
+.expandable-card.active .icon-circle svg.custom-icon {
+    fill: var(--light) !important;
+}
+
+.expandable-card.active .chevron {
+    transform: rotate(180deg);
+}
+
+.expandable-card.active .expandable-content {
+    padding-top: 10px;
+    padding-bottom: 24px;
+}
+
+/* ===========================================
+   ADVANCED PROCEDURES ACCORDION (Media Accordion) - POLISHED V2
+   =========================================== */
+
+/* TWEAK: Enhanced Category Title */
+/* TWEAK: Enhanced Category Title */
+.procedure-category-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    /* CHANGE: Color back to Medical Blue */
+    color: var(--brand-blue); 
+    margin: 40px 0 20px;
+    /* CHANGE: Border color back to Medical Blue */
+    border-bottom: 2px solid var(--brand-blue); 
+    padding-bottom: 8px;
+}
+
+.advanced-accordion-container {
+    max-width: var(--container);
+    margin: 0 auto;
+}
+
+.advanced-accordion-item {
+    border: 1px solid var(--brand-light);
+    margin-bottom: 10px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.advanced-accordion-header {
+    width: 100%;
+    padding: 18px 25px;
+    background-color: var(--light);
+    color: var(--ink);
+    border: none;
+    text-align: left;
+    font-size: 1.15rem;
+    font-weight: 700; /* TWEAK: Make header bold */
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.advanced-accordion-header:hover {
+    background-color: #F7F8FC; /* TWEAK: Lighter hover shade */
+}
+
+/* --- ACTIVE/OPEN STATE STYLES --- */
+
+.advanced-accordion-header[aria-expanded="true"] {
+    background-color: var(--brand-blue);
+    color: var(--light);
+}
+
+.advanced-accordion-header[aria-expanded="true"] .chevron {
+    transform: rotate(180deg);
+    color: var(--light); 
+}
+
+/* The content panel that is revealed (contains the grid) */
+.advanced-accordion-content {
+    background-color: var(--light);
+    max-height: 0; 
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    padding: 0 25px; 
+}
+
+/* The core two-column layout for content and media */
+.procedure-media-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 30px;
+    padding: 25px 0;
+}
+
+@media (max-width: 768px) {
+    .procedure-media-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+}
+
+.procedure-text-content {
+    font-size: 0.98rem; /* TWEAK: Slightly larger text */
+}
+
+.procedure-text-content p {
+    margin-bottom: 14px;
+    line-height: 1.7; /* TWEAK: Better line height */
+}
+
+/* TWEAK: Enhanced Benefits Text with Checkmark */
+.procedure-benefits {
+    color: var(--brand-green);
+    font-style: italic;
+    font-weight: 500;
+    padding-top: 5px;
+    padding-left: 20px; 
+    position: relative;
+    line-height: 1.7;
+    margin-bottom: 15px !important;
+}
+
+.procedure-benefits::before {
+    content: "\f00c"; /* Font Awesome Checkmark icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: var(--brand-green);
+}
+
+/* Styling for the Media Column (Images and Video) */
+.procedure-media-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.media-placeholder {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #eee;
+}
+
+.procedure-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.youtube-embed {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+}
+
+.youtube-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Small button style for the CTA */
+.btn--small {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* ============================================
+   CLINICAL GRID (AUTO-FADE) - POLISHED & PRESENTABLE
+   ============================================ */
+   
+
+
+/* 2. Layout & Card Refinement */
+.clinical-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    /* Optional: Center and constrain max width for large screens */
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.clinical-card {
+    background: var(--light); 
+    border-radius: var(--radius);
+    /* Subtle Shadow for pop on the light-green background */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Refined Border: Lighter main border, blue accent border on the bottom of the header */
+    border: 1px solid #e0e0e0; 
+}
+
+.clinical-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.clinical-card__header {
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Blue accent line below the header */
+    border-bottom: 4px solid var(--brand-blue); 
+    /* Subtle inner shadow to give the header a slight lift */
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.03); 
+}
+
+.clinical-card__header h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    color: var(--ink); 
+    font-weight: 700;
+}
+
+/* 3. The Fading Frame & Images */
+.fading-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3; 
+    background: #000; 
+    overflow: hidden;
+    cursor: pointer; 
+    /* White film mount border for clinical look */
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2) inset;
+}
+
+.fading-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.8s cubic-bezier(0.25, 0.1, 0.25, 1); 
+}
+
+.img-before { z-index: 1; }
+.img-after { z-index: 2; opacity: 0; }
+
+/* CSS Hover Effect (Desktop Manual Control) */
+.fading-frame:hover .img-after {
+    opacity: 1;
+}
+.fading-frame:hover .tag-after {
+    opacity: 1;
+}
+.fading-frame:hover .tag-before {
+    opacity: 0;
+}
+
+/* 4. Polished Labels */
+.label-tag {
+    position: absolute;
+    top: 15px;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--brand-blue); /* Text color is brand blue */
+    /* Light, clinical background */
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid var(--brand-blue); /* Subtle blue outline */
+    border-radius: 4px;
+    z-index: 10;
+    pointer-events: none;
+    transition: opacity 0.4s;
+}
+
+.tag-before { left: 15px; }
+.tag-after { right: 15px; opacity: 0; }
+
+/* 5. Toggle Hint for UX */
+.toggle-hint {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    z-index: 5;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+.fading-frame:hover .toggle-hint { opacity: 0; }
+
+
+/* 6. Footer & Typography Refinement */
+.clinical-card__footer {
+    padding: 15px 20px;
+    margin-top: auto;
+    background: var(--light);
+    border-top: 1px solid #eee;
+}
+
+.clinical-card__footer .procedure-name {
+    /* Main Procedure Name (Bold & Blue) */
+    font-weight: 700;
+    color: var(--brand-blue); 
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.clinical-card__footer .case-note {
+    /* Case Note Summary (Italic & Muted) */
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+/* NEW: Solid Green Button Style (Primary CTA) */
+.btn--green-solid {
+    background: var(--brand-green);
+    border: 2px solid var(--brand-green);
+    color: var(--light) !important;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn--green-solid:hover {
+    background: #008f82; /* Slightly darker green on hover */
+    border-color: #008f82;
+    transform: translateY(-1px);
+}
+
+/* === MOBILE OPTIMIZATION === */
+@media (max-width: 768px) {
+    .clinical-grid {
+      gap: 20px;
+    }
+    .clinical-card__header {
+        border-bottom-width: 3px;
+    }
+    .clinical-card:hover {
+        transform: none; 
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Ensure after image is shown when JS toggle class is active on mobile */
+    .fading-frame.show-result .img-after {
+        opacity: 1;
+    }
+    .fading-frame.show-result .tag-after { opacity: 1; }
+    .fading-frame.show-result .tag-before { opacity: 0; }
+    .fading-frame.show-result .toggle-hint { opacity: 0; }
+}
+
+/* ============================================== */
+/* 🆕 FINALIZED: Testimonials & Social Proof Section Styles (V2 - Styled) */
+/* ============================================== */
+
+/* Main Section Styling */
+.testimonials-proof-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: var(--bg);
+}
+
+/* Ensure Stars are Gold */
+.stars {
+    color: #f59e0b; /* Gold color */
+    margin-bottom: 0.75rem;
+    letter-spacing: 2px;
+}
+
+/* ============================================== */
+/* 🆕 NEW: Testimonial Background Image Styles */
+/* ============================================== */
+
+/* Ensures section is positioned relative to contain the background image */
+.testimonials-proof-section {
+    position: relative; 
+    overflow: hidden;
+}
+
+/* The element that holds the background image */
+.testi-bg-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--testi-bg); /* Uses the URL from the :root variable */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    /* 🎯 Opacity Control via CSS Variable */
+    opacity: var(--testi-bg-opacity);
+    z-index: 1; /* Place behind the content */
+}
+
+/* Ensure all content (header, cards, buttons) is above the background image */
+.testimonials-proof-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* [Keep all other testimonial card, button, and accent bar styles here] */
+
+/* 1. CARD STYLING (Applies to both Text and Video) */
+.testimonial-card, .video-testimonial-card {
+    background-color: var(--light); 
+    /* 🎯 THIN BLUE BORDER */
+    border: 1px solid var(--brand-blue); /* Primary Blue Border */
+    box-shadow: 0 5px 20px rgba(0,0,0,.08); /* Slightly softer shadow */
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+    display: flex; /* Helps quote text fill space */
+    flex-direction: column;
+}
+
+/* Improve Typography: Quote */
+.testimonial-card .quote {
+    font-size: 1.15rem; /* Slightly larger */
+    font-style: italic;
+    color: var(--ink); /* Dark Text */
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Pushes the profile/button to the bottom */
+}
+
+/* Improve Typography: User Name */
+.user-profile h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--brand-blue); /* Use primary blue for prominence */
+}
+
+/* Card Hover Effect */
+.testimonial-card:hover, .video-testimonial-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0,0,0,.18); /* Stronger shadow on hover */
+    border-color: var(--brand-green); /* Green accent border on hover */
+}
+
+/* 2. VIDEO TESTIMONIAL CARD SPECIFIC STYLING */
+.video-testimonial-card .ratio iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    border-radius: calc(var(--radius) / 2); 
+}
+
+/* 🎯 VERTICAL BALANCE ADJUSTMENT (Desktop only) */
+/* This ensures the 3 cards and 2 video blocks visually match in height */
+@media (min-width: 992px) {
+    /* For the written cards, we need to balance the space between them */
+    .written-card:not(:last-child) {
+        margin-bottom: 1.5rem; /* Ensures consistent spacing between cards */
+    }
+
+    /* We use my-4 (margin-top/bottom) on the video cards in HTML, which is 1.5rem, 
+       This provides the vertical separation needed for alignment. No specific CSS needed here. */
+}
+
+/* ============================================== */
+/* 🆕 NEW: ACCENT BAR STYLING */
+/* ============================================== */
+
+/* Wrapper containing the accent bar and buttons */
+.accent-bar-wrapper {
+    /* Adds top and bottom padding around the bar/buttons */
+    padding-top: 2rem;
+    position: relative; /* Needed for the absolute position of the bar */
+}
+
+/* The horizontal accent bar itself */
+.accent-bar-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Spans the container width */
+    max-width: var(--container); /* Matches your container width */
+    height: 1px; /* Thin line */
+    background-color: var(--brand-blue); /* Primary Blue color */
+    opacity: 0.3; /* Subtle transparency */
+}
+
+
+/* 🎯 Final Card Balance Adjustment */
+/* We remove the complex desktop margin overrides now that the buttons are not dependent on vertical alignment */
+@media (min-width: 992px) {
+    /* Ensures the 3 written cards fill the column height slightly better by spreading their bottom margin */
+    .written-card:not(:last-child) {
+        margin-bottom: 2rem !important; /* Slightly more space between text cards */
+    }
+    
+    /* Ensure the 2 video cards are centered in their block */
+    .video-testimonial-card:first-child {
+        margin-top: 1.5rem; /* Add space above the first video card */
+    }
+    .video-testimonial-card:last-child {
+        margin-bottom: 1.5rem; /* Add space below the last video card */
+    }
+}
+
+/* ============================================== */
+/* 🆕 NEW: Shared Background Image Styling Class */
+/* ============================================== */
+
+/* Reusable class for setting up the image and content stacking */
+.bg-image-section {
+    position: relative; 
+    overflow: hidden;
+    /* Crucial: Ensure the background color is explicitly white/main BG */
+    background-color: var(--bg) !important; 
+}
+
+/* Pseudo-element for the background image (controls opacity separate from content) */
+.bg-image-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--shared-section-bg); /* Reads the image URL from :root */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Opacity Control */
+    opacity: var(--shared-bg-opacity); /* Reads the opacity value from :root */
+    z-index: 1; /* Place behind the content */
+}
+
+/* Ensure all content (containers) is positioned above the background image */
+.bg-image-section > .container {
+    position: relative;
+    z-index: 2;
+}

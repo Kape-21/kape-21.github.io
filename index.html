@@ -1,689 +1,698 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dr. Jay Deep Ghosh – Orthopedic Spine Surgeon</title>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dr Jay Deep Ghosh | Orthopaedic Spine Surgeon</title>
 
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+ <!-- Bootstrap + Font Awesome -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/bootstrap-overrides.css">
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Swiper (hero + testimonials) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-      }
-    </style>
-  </head>
 
-  <body class="bg-white text-slate-900 antialiased">
-    <!-- NAVBAR -->
-    <header
-      class="bg-[#039BE5]/15 backdrop-blur shadow-sm border-b border-[#039BE5]/20 sticky top-0 z-50"
-      id="navbar"
-    >
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
-          <!-- Logo + Name -->
-          <a href="index.html" class="flex items-center gap-3">
-            <!-- LOGO (separate hover) -->
-            <img
-              src="images/logo2.png"
-              alt="Logo"
-              class="w-10 h-10 object-contain transition-transform duration-200 hover:scale-125"/>
 
-            <!-- NAME + TITLE (group hover) -->
-            <div
-              class="transition-transform duration-200 hover:scale-110"
-            >
-              <p class="text-[15px] font-bold leading-tight">
-                Dr. Jay Deep Ghosh
-              </p>
-              <p class="text-[12px] text-slate-600 -mt-1">
-                Orthopedic Spine Surgeon
-              </p>
-            </div>
-          </a>
-
-          <!-- Desktop Nav -->
-          <nav
-            class="hidden md:flex items-center gap-8 text-sm font-medium"
-          >
-            <a
-              href="about.html"
-              class="hover:text-[#039BE5] transition-transform duration-150 hover:scale-110 inline-block"
-              >About</a
-            >
-            <a
-              href="procedures.html"
-              class="hover:text-[#039BE5] transition-transform duration-150 hover:scale-110 inline-block"
-              >Procedures</a
-            >
-            <a
-              href="before-after.html"
-              class="hover:text-[#039BE5] transition-transform duration-150 hover:scale-110 inline-block"
-              >Before/After</a
-            >
-            <a
-              href="videos.html"
-              class="hover:text-[#039BE5] transition-transform duration-150 hover:scale-110 inline-block"
-              >Videos</a
-            >
-            <a
-              href="testimonials.html"
-              class="hover:text-[#039BE5] transition-transform duration-150 hover:scale-110 inline-block"
-              >Testimonials</a
-            >
-
-            <a
-              href="book.html"
-              class="inline-flex items-center justify-center px-4 py-2 rounded-full
-                     text-sm font-semibold text-white bg-[#039BE5] hover:bg-[#0F8B63]
-                     shadow-sm transition-transform duration-200 hover:scale-110"
-            >
-              Book Consultation
-            </a>
-          </nav>
-
-          <!-- Mobile Menu Button -->
-          <button
-            id="menu-btn"
-            class="md:hidden p-2 rounded-md border border-slate-200"
-          >
-            <img src="images/menu.svg" class="w-5 h-5" alt="Menu" />
-          </button>
+ <!-- HEADER -->
+<header class="ribbon-header fixed-top">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg">
+      
+      <a class="navbar-brand" href="index.html">
+        <img 
+          src="assets/icon2.png" 
+          alt="Dr. Jay Deep Ghosh Logo" 
+          class="ribbon-logo d-inline-block align-top"
+        >
+        <div class="navbar-title-wrap">
+            <h1 class="navbar-title">DR. JAY DEEP GHOSH</h1>
+            <p class="navbar-subtitle">Your path to pain free living</p>
         </div>
-      </div>
+      </a>
 
-      <!-- Mobile Nav -->
-      <div
-        id="mobile-nav"
-        class="hidden md:hidden bg-white shadow-lg px-6 py-4"
-      >
-        <nav class="space-y-4 text-sm">
-          <a href="about.html">About</a>
-          <a href="procedures.html">Procedures</a>
-          <a href="before-after.html">Before/After</a>
-          <a href="videos.html">Videos</a>
-          <a href="testimonials.html">Testimonials</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-          <a
-            href="book.html"
-            class="w-full inline-flex items-center justify-center px-4 py-2 rounded-full
-                   text-sm font-semibold text-white bg-[#039BE5] hover:bg-[#0F8B63]
-                   shadow-sm transition-transform duration-200 hover:scale-110"
-          >
-            Book Consultation
+      <div class="collapse navbar-collapse" id="navbarNav">
+        
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-circle-info"></i> About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-notes-medical"></i> Procedures</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-camera-retro"></i> Before & After</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-video"></i> Informative Videos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-star"></i> Testimonials</a></li>
+        </ul>
+
+        <div class="header-action ms-auto d-flex align-items-center gap-2">
+          <a href="contact.html" class="btn btn--sm btn--ghost-contrast">
+              <i class="fa-solid fa-headset"></i> Contact Us
           </a>
-        </nav>
-      </div>
-    </header>
-
-    <!-- HERO -->
-    <section
-      class="bg-gradient-to-br from-[#039BE5] to-[#0F8B63] text-white py-16 md:py-24"
-    >
-      <div
-        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-14 items-center"
-      >
-        <!-- Text -->
-        <div data-aos="fade-right" class="space-y-6 max-w-lg">
-          <p class="text-xs tracking-[0.25em] uppercase text-white/80">
-            SPINE CARE EXCELLENCE
-          </p>
-
-          <h1 class="text-4xl md:text-5xl font-semibold leading-tight">
-            Advanced Spine Surgery<br />
-            with 20+ Years of Expertise
-          </h1>
-
-          <p class="text-sm md:text-base text-white/90">
-            Dr. Jay Deep Ghosh is a fellowship-trained Orthopedic Spine
-            Surgeon with 20+ years of experience and over 22,000 successful
-            spine surgeries.
-          </p>
-
-          <div class="flex flex-wrap gap-5 text-sm text-white/90">
-            <div class="flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-emerald-300"></span>
-              22,000+ spine surgeries
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-emerald-300"></span>
-              20+ years of experience
-            </div>
-          </div>
-
-          <a
-            href="book.html"
-            class="inline-flex items-center justify-center px-5 py-2.5 rounded-full
-                   text-sm font-semibold text-white bg-[#039BE5] hover:bg-[#0F8B63]
-                   shadow-sm transition-transform duration-200 hover:scale-110"
-          >
-            Book Consultation
+          
+          <a href="appointment.html" class="btn btn-appointment btn--accent-contrast">
+              Book an Appointment
           </a>
         </div>
+      </div>
+    </nav>
+  </div>
+</header>
 
-        <!-- Image -->
-        <div
-          class="flex justify-center md:justify-end"
-          data-aos="fade-left"
-        >
-          <div class="bg-white/90 rounded-3xl shadow-xl p-3">
-            <img
-              src="images/doc-potrait2.jpg"
-              alt="Dr. Jay Deep Ghosh"
-              class="w-64 md:w-72 h-auto rounded-2xl object-cover"
-            />
+
+  <!-- Hero Slider -->
+  <section class="hero">
+    <div class="swiper hero-swiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide hero__slide" style="--bg:url('assets/doctor-team2.jpg');">
+          <div class="container hero__content">
+            <h1>Comprehensive Spine & Orthopaedic Care</h1>
+            <p>Advanced evaluation, counselling, and surgery—right here in North East India.</p>
+            <div class="hero__cta">
+              <a href="appointment.html" class="btn btn--accent">Book Appointment</a>
+              <a href="#about" class="btn btn--ghost">Learn More</a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="bg-white py-12">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          class="bg-white rounded-2xl border border-[#039BE5]/30 shadow-sm p-8"
-          data-aos="fade-up"
-        >
-          <div class="flex items-center gap-2 mb-6">
-            <span
-              class="h-1.5 w-6 rounded-full bg-gradient-to-r from-[#039BE5] to-[#0F8B63]"
-            ></span>
-            <h2 class="text-xl font-semibold mt-1">Contact & Location</h2>
+        <!-- Slide 2 -->
+        <div class="swiper-slide hero__slide" style="--bg:url('assets/surgery18.jpg');">
+          <div class="container hero__content">
+            <h1>Complex Spine Surgery Expertise</h1>
+            <p>Severe kyphosis, trauma, deformity correction, and minimally invasive techniques.</p>
+            <div class="hero__cta">
+              <a href="#procedures" class="btn btn--accent">View Procedures</a>
+            </div>
           </div>
-
-          <div class="grid sm:grid-cols-3 gap-8 text-sm">
-            <div>
-              <p class="text-xs uppercase tracking-wide text-slate-500">
-                Phone
-              </p>
-              <p class="mt-1 font-medium">+91-XXXXXXXXXX</p>
-            </div>
-
-            <div>
-              <p class="text-xs uppercase tracking-wide text-slate-500">
-                Email
-              </p>
-              <p class="mt-1">contact@drspineclinic.com</p>
-            </div>
-
-            <div>
-              <p class="text-xs uppercase tracking-wide text-slate-500">
-                Clinic Address
-              </p>
-              <p class="mt-1 leading-relaxed">
-                [Clinic Name]<br />
-                [Address Line 1]<br />
-                [City], [State] – [PIN]
-              </p>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide hero__slide" style="--bg:url('assets/withpatients11.jpg');">
+          <div class="container hero__content">
+            <h1>Trusted Care at Apollo Hospitals</h1>
+            <p>Consultations and surgeries performed at Apollo Hospitals, Guwahati.</p>
+            <div class="hero__cta">
+              <a href="#testimonials" class="btn btn--accent">Patient Stories</a>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Separator -->
-    <div
-      class="h-[2px] bg-gradient-to-r from-transparent via-[#039BE5]/20 to-transparent"
-    ></div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
 
-    <!-- ABOUT + WHY CHOOSE US -->
-    <section class="bg-[#ECF7FF] py-14 border-y border-[#039BE5]/10">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- About block -->
-        <div class="flex items-center justify-between mb-6">
-          <div>
-            <span
-              class="h-1.5 w-6 rounded-full inline-block bg-gradient-to-r from-[#039BE5] to-[#0F8B63]"
-            ></span>
-            <p
-              class="text-[11px] uppercase tracking-[0.2em] mt-2 text-slate-500"
-            >
-              About
-            </p>
-            <h2 class="text-2xl font-semibold mt-3">
-              About Dr. Jay Deep Ghosh
-            </h2>
-          </div>
+  <!-- About -->
+<section class="section section--doctor-about" id="about"> 
+    <div class="container">
+        <div class="row align-items-center"> 
+            
+            <!--<div class="col-lg-6 mb-4 mb-lg-0"> 
+                <div class="doctor-photo-wrap">
+                    <img src="assets/potrait7.jpg" alt="Dr. Jay Deep Ghosh - Orthopaedic Spine Surgeon" class="rounded media-cover doctor-highlight-img">
+                </div>
+            </div> -->
 
-          <a
-            href="about.html"
-            class="text-sm font-semibold text-[#039BE5] hover:text-[#0F8B63]"
-          >
-            See Full Profile →
-          </a>
-        </div>
-
-        <p
-          class="text-sm md:text-base text-slate-700 leading-relaxed max-w-2xl"
-          data-aos="fade-up"
-        >
-          Dr. Jay Deep Ghosh specializes in treating complex spinal
-          disorders using minimally invasive techniques. His approach
-          focuses on faster recovery, minimal tissue disruption, and
-          achieving long-term functional outcomes with compassionate,
-          patient-centered care.
-        </p>
-
-        <!-- Why choose us cards -->
-        <div
-          class="mt-8 grid sm:grid-cols-3 gap-5"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <div
-            class="bg-white rounded-xl border border-[#039BE5]/25 shadow-sm p-4 flex flex-col gap-1 hover:-translate-y-1 hover:shadow-md transition-transform duration-200"
-          >
-            <p class="text-xs font-semibold text-[#039BE5] uppercase">
-              Experience
-            </p>
-            <p class="text-lg font-semibold text-slate-900">
-              20+ Years
-            </p>
-            <p class="text-xs text-slate-600">
-              Extensive experience in managing complex spine conditions.
-            </p>
-          </div>
-
-          <div
-            class="bg-white rounded-xl border border-[#039BE5]/25 shadow-sm p-4 flex flex-col gap-1 hover:-translate-y-1 hover:shadow-md transition-transform duration-200"
-          >
-            <p class="text-xs font-semibold text-[#039BE5] uppercase">
-              Surgeries
-            </p>
-            <p class="text-lg font-semibold text-slate-900">
-              22,000+ Cases
-            </p>
-            <p class="text-xs text-slate-600">
-              Proven outcomes with a large volume of successful surgeries.
-            </p>
-          </div>
-
-          <div
-            class="bg-white rounded-xl border border-[#039BE5]/25 shadow-sm p-4 flex flex-col gap-1 hover:-translate-y-1 hover:shadow-md transition-transform duration-200"
-          >
-            <p class="text-xs font-semibold text-[#039BE5] uppercase">
-              Approach
-            </p>
-            <p class="text-lg font-semibold text-slate-900">
-              Minimally Invasive
-            </p>
-            <p class="text-xs text-slate-600">
-              Focused on reduced pain, faster recovery, and early mobility.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Separator -->
-    <div
-      class="h-[2px] bg-gradient-to-r from-transparent via-[#039BE5]/20 to-transparent"
-    ></div>
-
-    <!-- PROCEDURES -->
-    <section class="bg-white py-14">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between mb-6">
-          <div>
-            <span
-              class="h-1.5 w-6 rounded-full inline-block bg-gradient-to-r from-[#039BE5] to-[#0F8B63]"
-            ></span>
-            <p
-              class="text-[11px] uppercase tracking-[0.2em] mt-2 text-slate-500"
-            >
-              Procedures
-            </p>
-            <h2 class="text-2xl font-semibold mt-3">
-              Key Spine Procedures
-            </h2>
-          </div>
-
-          <a
-            href="procedures.html"
-            class="text-sm font-semibold text-[#039BE5] hover:text-[#0F8B63]"
-            >See All Procedures →</a
-          >
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <article
-            class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm overflow-hidden hover:-translate-y-1 hover:shadow-md transition-transform duration-200"
-            data-aos="fade-up"
-          >
-            <div class="h-1.5 bg-[#039BE5]"></div>
-            <div class="p-4">
-              <h3 class="font-semibold text-sm">
-                Minimally Invasive Spine Surgery
-              </h3>
-              <p class="mt-2 text-xs text-slate-600">
-                Smaller incisions, less tissue disruption, and quicker
-                recovery times.
-              </p>
-            </div>
-          </article>
-
-          <article
-            class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm overflow-hidden hover:-translate-y-1 hover:shadow-md transition-transform duration-200"
-            data-aos="fade-up"
-            data-aos-delay="50"
-          >
-            <div class="h-1.5 bg-[#039BE5]"></div>
-            <div class="p-4">
-              <h3 class="font-semibold text-sm">Spinal Fusion</h3>
-              <p class="mt-2 text-xs text-slate-600">
-                Stabilizing painful or unstable spinal segments for long-term
-                relief.
-              </p>
-            </div>
-          </article>
-
-          <article
-            class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm overflow-hidden hover:-translate-y-1 hover:shadow-md transition-transform duration-200"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div class="h-1.5 bg-[#039BE5]"></div>
-            <div class="p-4">
-              <h3 class="font-semibold text-sm">Disc Replacement</h3>
-              <p class="mt-2 text-xs text-slate-600">
-                Motion-preserving alternative to fusion for selected patients.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Separator -->
-    <div
-      class="h-[2px] bg-gradient-to-r from-transparent via-[#039BE5]/20 to-transparent"
-    ></div>
-
-    <!-- BEFORE & AFTER -->
-    <section class="bg-[#E6FFF4] py-14">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between mb-6">
-          <div>
-            <span
-              class="h-1.5 w-6 rounded-full inline-block bg-gradient-to-r from-[#039BE5] to-[#0F8B63]"
-            ></span>
-            <p
-              class="text-[11px] uppercase tracking-[0.2em] mt-2 text-slate-500"
-            >
-              Before & After
-            </p>
-            <h2 class="text-2xl font-semibold mt-3">
-              Before & After Results
-            </h2>
-          </div>
-
-          <a
-            href="before-after.html"
-            class="text-sm font-semibold text-[#039BE5] hover:text-[#0F8B63]"
-            >See More →</a
-          >
-        </div>
-
-        <div
-          class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm p-5"
-          data-aos="fade-up"
-        >
-          <div class="grid md:grid-cols-2 gap-6">
-            <!-- BEFORE -->
-            <div class="space-y-2">
-              <span
-                class="inline-block bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full"
-                >BEFORE</span
-              >
-              <img
-                src="images/before1.jpg"
-                alt="Spine surgery before"
-                loading="lazy"
-                class="w-full h-[360px] object-cover rounded-lg border-4 border-white shadow-md"
-              />
+           <div class="col-lg-12"> 
+                <div class="doctor-bio-content">
+                    <h2 class="section__title-small">Dr. Jay Deep Ghosh</h2>
+                    <h3 class="muted-h3">Senior Consultant, Orthopaedics & Spine Surgery</h3>
+                    
+                    <p>With over 23 years of experience and thousands of successful surgeries, Dr. Ghosh is one of Northeast India’s leading spine specialists. Trained at premier institutions like Sir Ganga Ram Hospital and AO Spine International, he combines advanced surgical precision with a compassionate, patient-first approach.</p>
+                    
+                    <h4 class="expertise-title center mt-24">Areas of Expertise</h4>
+                        <ul class="expertise-list">
+                            <li>Joint Replacement</li>
+                            <li>Spinal Deformity Correction</li>
+                            <li>Degenerative Spine Conditions</li>
+                            <li>Minimally Invasive Surgery</li>
+                        </ul>
+                  <div class="quick-stats grid grid--3 mt-24">
+                        <div class="stat-card">
+                            <p class="stat-main">23+</p>
+                            <p class="stat-sub">Years of Experience</p>
+                        </div>
+                        <div class="stat-card">
+                            <p class="stat-main">10,000+</p>
+                            <p class="stat-sub">Surgeries Completed</p>
+                        </div>
+                        <div class="stat-card">
+                            <p class="stat-main">FNB Spine</p>
+                            <p class="stat-sub">AO Spine Certified | Delhi</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex gap-2 mt-24">
+                        <a href="profile.html" class="btn btn--accent">View Profile</a>
+                        <a href="appointment.html" class="btn btn--ghost">Book Appointment</a>
+                    </div>
+                </div>
             </div>
 
-            <!-- AFTER -->
-            <div class="space-y-2">
-              <span
-                class="inline-block bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full"
-                >AFTER</span
-              >
-              <img
-                src="images/after1.jpg"
-                alt="Spine surgery after"
-                loading="lazy"
-                class="w-full h-[360px] object-cover rounded-lg border-4 border-white shadow-md"
-              />
-            </div>
-          </div>
-
-          <div class="mt-4">
-            <p class="font-semibold text-sm text-slate-800">
-              Lumbar Disc Herniation – Post Surgery
-            </p>
-            <p class="text-xs text-slate-600">
-              Significant pain relief and restored mobility within weeks.
-            </p>
-          </div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Separator -->
-    <div
-      class="h-[2px] bg-gradient-to-r from-transparent via-[#039BE5]/20 to-transparent"
-    ></div>
+<!--HERE WAS THE OLD CARDS-->
 
-    <!-- VIDEOS -->
-    <section class="bg-white py-14">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between mb-6">
-          <div>
-            <span
-              class="h-1.5 w-6 rounded-full inline-block bg-gradient-to-r from-[#039BE5] to-[#0F8B63]"
-            ></span>
-            <p
-              class="text-[11px] uppercase tracking-[0.2em] mt-2 text-slate-500"
-            >
-              Videos
-            </p>
-            <h2 class="text-2xl font-semibold mt-3">
-              Educational Videos
-            </h2>
+  <!-- Procedures -->
+  <section class="section advanced-procedures-section bg-image-section">
+  <div class="container">
+    <h2 class="section__title center">Areas of Care</h2>
+    <p class="section__subtitle center">Explore the core areas of expertise where Dr. Ghosh provides advanced, patient-centric surgical and non-surgical care.</p>
+    
+    <div class="expandable-cards-container">
+      
+      <article class="expandable-card" onclick="toggleCard(this)">
+        <div class="card-header-content">
+          <div class="icon-circle">
+            <svg class="custom-icon" viewBox="0 0 494.636 494.636" xmlns="http://www.w3.org/2000/svg">
+              <g><path d="M294.747,215.753c-3.148-8.837-6.122-17.183-8.935-25.737c-23.191-70.541,28.29-182.134,28.813-183.253c0.993-2.127,0.075-4.656-2.051-5.649c-2.127-0.995-4.656-0.076-5.649,2.05c-0.099,0.212-7.447,16.037-15.404,39.382c-6.418-4.023-18.976-9.963-35.309-8.352c9.419-17.222,16.717-27.251,16.846-27.427c1.389-1.892,0.982-4.551-0.909-5.94c-1.891-1.39-4.55-0.985-5.94,0.906c-0.602,0.819-9.745,13.367-20.821,34.586c-0.292,0.085-0.578,0.156-0.871,0.247c-5.682,1.758-12.857,2.062-19.186,2.33c-10.486,0.444-20.391,0.864-21.64,8.804c-0.085,0.538-0.195,1.152-0.316,1.826c-1.081,6.026-3.095,17.244,3.907,23.4c4.398,3.868,11.105,4.725,20.386,2.605c-0.98,2.54-1.951,5.123-2.905,7.767c-2.245,6.226-4.45,12.918-6.531,19.994c-6.237,3.682-13.936,4.244-20.753,4.733c-8.805,0.633-18.784,1.35-19.765,11.183c-0.05,0.5-0.11,1.036-0.173,1.602c-0.684,6.1-1.829,16.31,5.274,21.739c2.715,2.074,6.248,3.113,10.652,3.113c4.369,0,9.606-1.036,15.736-3.085c-1.931,11.684-3.28,23.98-3.788,36.74c-5.189,1.468-10.265,1.829-14.651,2.136c-7.845,0.548-16.737,1.17-17.714,10.395c-0.586,5.538-2.37,22.391,7.881,29.309c2.718,1.834,5.896,2.753,9.571,2.753c4.616,0,10.027-1.474,16.276-4.382c0.999,9.125,2.508,18.389,4.601,27.748c-4.537,1.252-9.37,1.615-13.834,1.948c-8.521,0.637-18.18,1.358-19.161,10.624l-0.011,0.104c-0.68,6.418-2.271,21.45,7.128,28.152c6.702,4.778,16.648,3.976,30.41-2.459c1.905-0.891,3.853-1.66,5.833-2.328c4.005,13.403,7.27,26.214,9.929,38.399c-0.216,0.075-0.432,0.143-0.648,0.22c-6.761,2.423-14.348,2.395-21.038,2.377c-9.729-0.031-19.796-0.064-21.858,9.44l-0.196,0.893c-1.49,6.747-4.262,19.307,3.549,26.692c5.959,5.634,16.081,6.348,30.944,2.181c5.411-1.517,10.793-2.35,16.137-2.507c1.323,10.051,2.222,19.49,2.789,28.278c-0.259,0.019-0.516,0.029-0.776,0.053c-6.476,0.567-12.049-0.188-16.967-0.854c-8.295-1.124-16.873-2.287-20.48,7.307c-1.274,3.39-5.151,13.706,0.78,22.272c5.344,7.718,16.639,11.471,34.531,11.473c1.146,0,2.271,0.047,3.374,0.135c-0.009,0.197-0.017,0.403-0.026,0.6c-1.777,37.064-9.077,57.75-9.148,57.95c-0.798,2.207,0.344,4.644,2.551,5.442c0.478,0.172,0.965,0.254,1.445,0.254c1.739,0,3.372-1.075,3.997-2.806c0.315-0.87,7.723-21.736,9.616-59.846c25.664,7.753,37.073,39.263,38.982,45.097c-1.411,4.121-2.892,8.307-4.446,12.558c-0.806,2.205,0.329,4.645,2.533,5.451c0.481,0.176,0.974,0.259,1.458,0.259c1.734,0,3.363-1.069,3.992-2.792C343.574,352.791,317.634,279.986,294.747,215.753z M302.4,432.089c-7.801-14.525-25.205-39.934-52.528-42.689c-0.55-8.732-1.418-18.091-2.695-28.043c12.85,1.395,25.449,6.763,37.665,16.091c13.647,10.422,22.185,22.507,23.871,24.998C307.062,411.906,304.972,421.775,302.4,432.089z M290.217,370.858c-14.036-10.774-29.004-16.845-44.218-18.079c-1.177-7.98-2.626-16.319-4.37-24.978c34.743-6.879,66.965,22.234,72.07,27.113c-0.341,11.281-1.342,23.186-3.135,35.829C306.167,385.331,299.287,377.82,290.217,370.858z M225.676,267.407c-1.636-5.018-3.062-10.017-4.333-14.995c0.898-0.487,1.786-1.011,2.653-1.601c30.762-20.899,72.213,4.249,75.848,6.535c2.842,9.354,5.439,18.979,7.601,29.039c-14.833-6.729-49.089-19.779-79.987-13.4C226.874,271.134,226.286,269.278,225.676,267.407z M296.076,245.482c-15.57-7.886-49.022-20.543-76.776-1.754c-2.06-9.534-3.512-18.97-4.412-28.25c38.098-18.049,66.463-0.75,71.773,2.906c0.026,0.073,0.053,0.148,0.079,0.221C289.899,227.47,293.07,236.377,296.076,245.482z M213.739,185.347c1.566-0.684,3.137-1.468,4.701-2.393c24.268-14.371,50.394-4.209,56.213-1.614c0.866,3.915,1.889,7.696,3.084,11.331c1.485,4.516,3.048,9.066,4.633,13.594c-13.153-6.149-37.812-13.056-68.179,0.198C213.754,199.312,213.608,192.264,213.739,185.347z M232.669,86.429c0.166-0.462,0.336-0.912,0.504-1.372c4.643-1.303,12.024-2.789,15.008-2.245c2.314,0.416,4.522-1.112,4.942-3.422c0.42-2.31-1.112-4.522-3.421-4.941c-3.536-0.642-8.688,0.1-12.856,0.968c0.365-0.92,0.73-1.837,1.099-2.742c23.545-6.062,38.399,0.409,43.545,3.359c-2.081,8.085-3.844,15.926-5.292,23.519c-8.76-3.471-27.757-8.934-47.478-1.478C230.01,94.039,231.332,90.144,232.669,86.429z M225.446,108.919c20.337-11.182,42.003-3.829,49.231-0.772c-1.321,8.118-2.264,15.938-2.823,23.45c-9.028-3.507-28.014-8.565-51.567-1.873C221.833,122.481,223.575,115.528,225.446,108.919z M288.759,50.895c-1.702,5.306-3.395,10.906-5.019,16.73c-6.998-3.506-21.214-8.355-41.732-4.552c3.105-7.061,6.233-13.592,9.247-19.499C269.981,39.454,283.873,47.456,288.759,50.895z M230.597,65.93c-8.73,2.756-15.018,2.976-17.703,0.613c-3.401-2.991-1.939-11.139-1.153-15.516c0.121-0.674,0.232-1.292,0.321-1.844c1.529-1.282,8.789-1.59,13.629-1.796c4.693-0.198,9.812-0.43,14.738-1.218c-2.901,5.976-5.863,12.474-8.781,19.447C231.295,65.725,230.952,65.817,230.597,65.93z M187.976,135.795c-3.282-2.509-2.504-9.447-1.99-14.038c0.067-0.602,0.131-1.173,0.185-1.705c0.231-2.319,3.178-2.92,11.916-3.548c5.212-0.374,11.302-0.813,17.234-2.693c-1.591,6.126-3.064,12.496-4.366,19.097C195.564,138.908,189.952,137.305,187.976,135.795z M215.732,156.941c0.274-0.321,8.182-8.8,22.038-6.582c2.311,0.364,4.497-1.207,4.868-3.525c0.371-2.317-1.208-4.497-3.525-4.868c-9.764-1.563-16.979,0.674-21.729,3.258c0.325-2.02,0.664-4.025,1.023-6.008c25.9-8.846,46.643-1.392,52.957,1.41c-0.375,10.992,0.121,21.277,1.495,30.828c-11.483-4.1-35.458-9.606-58.749,4.186c-0.001,0-0.002,0.001-0.003,0.001C214.451,169.298,215.001,163.018,215.732,156.941z M185.684,214.111c-2.744-1.852-5.697-7.063-4.183-21.368c0.178-1.683,1.424-2.222,9.854-2.811c3.979-0.277,8.76-0.619,13.856-1.791c-0.061,7.322,0.152,14.774,0.716,22.343C196.444,215.39,189.45,216.653,185.684,214.111z M212.308,277.946c-10.436,4.881-17.999,6.001-21.874,3.238c-5.359-3.821-4.134-15.395-3.61-20.337l0.011-0.104c0.202-1.905,3.508-2.457,11.341-3.042c4.633-0.346,9.934-0.75,15.188-2.163c1.251,4.816,2.65,9.651,4.232,14.504c0.564,1.728,1.105,3.44,1.645,5.15C216.893,275.975,214.577,276.885,212.308,277.946z M229.969,281.17c33.116-6.355,71.82,11.776,79.521,15.624c2.583,14.505,4.199,29.964,4.34,46.823c-12.672-10.603-41.762-30.698-73.951-24.152C237.213,307.295,233.949,294.516,229.969,281.17z M220.129,355.336c-11.416,3.201-19.304,3.143-22.81-0.173c-4.313-4.078-2.215-13.579-1.089-18.684l0.203-0.923c0.544-2.51,4.746-2.762,13.523-2.743c6.893,0.024,15.437,0.044,23.467-2.718c1.557,7.78,2.866,15.287,3.953,22.502C231.632,352.821,225.871,353.726,220.129,355.336z M238.439,421.042c-14.482-0.002-24.007-2.703-27.544-7.811c-2.317-3.347-2.257-7.936,0.188-14.443c1.022-2.719,2.038-3.14,11.381-1.874c5.093,0.691,11.433,1.549,18.852,0.898c0.165-0.015,0.327-0.02,0.492-0.033c0.367,8.502,0.429,16.313,0.284,23.393C240.897,421.09,239.681,421.042,238.439,421.042z M250.564,422.487c0.174-7.377,0.132-15.537-0.239-24.438c29.991,4.251,46.839,42.209,48.732,46.704c-1.71,6.149-3.582,12.446-5.637,18.914C287.29,450.02,274.075,428.252,250.564,422.487z"/></g>
+              <path d="M276.341,223.495c-0.829-0.414-20.635-10.033-49.361,0.477c-2.204,0.807-3.337,3.247-2.531,5.452c0.63,1.722,2.258,2.79,3.992,2.79c0.485,0,0.978-0.083,1.46-0.26c25.022-9.156,42.381-0.981,42.654-0.85c2.096,1.039,4.64,0.186,5.687-1.908C279.292,227.098,278.441,224.545,276.341,223.495z"/>
+              <path d="M258.935,308.129c0.011,0,0.022,0,0.033,0c0.156-0.001,0.309-0.002,0.464-0.002c21.346,0,38.004,11.159,38.272,11.341c0.735,0.504,1.572,0.746,2.4,0.746c1.352,0,2.682-0.645,3.506-1.843c1.33-1.935,0.839-4.58-1.095-5.91c-0.768-0.527-18.946-12.834-43.074-12.834c-0.178,0-0.359,0.001-0.538,0.002c-2.347,0.018-4.235,1.935-4.218,4.282C254.704,306.248,256.603,308.129,258.935,308.129z"/>
+              <path d="M259.518,451.422c-2.048-1.147-4.638-0.417-5.785,1.632c-1.147,2.048-0.416,4.638,1.631,5.784c10.681,5.982,13.942,16.305,14.002,16.499c0.547,1.847,2.238,3.044,4.073,3.044c0.394,0,0.795-0.055,1.192-0.171c2.253-0.657,3.547-3.017,2.89-5.271C277.358,472.382,273.376,459.182,259.518,451.422z"/>
+            </svg>
           </div>
-
-          <a
-            href="videos.html"
-            class="text-sm font-semibold text-[#039BE5] hover:text-[#0F8B63]"
-            >See More →</a
-          >
+          <h3>Spine</h3>
+          <p class="summary-text">Disc herniation, stenosis, deformity, fractures, infections.</p>
+          <span class="chevron"><i class="fa-solid fa-chevron-down"></i></span>
         </div>
-
-        <div
-          class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm p-5"
-          data-aos="fade-up"
-        >
-          <img
-            src="images/video-thumb.jpg"
-            alt="Lumbar Disc Herniation video"
-            loading="lazy"
-            class="w-full rounded-xl border border-slate-200"
-          />
-          <p class="font-semibold text-sm mt-3">
-            Understanding Lumbar Disc Herniation
-          </p>
-          <p class="text-xs text-slate-600 max-w-2xl">
-            Explained in simple language with visual references to help
-            patients and families understand the condition and treatment
-            options.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Separator -->
-    <div
-      class="h-[2px] bg-gradient-to-r from-transparent via-[#039BE5]/20 to-transparent"
-    ></div>
-
-    <!-- TESTIMONIALS -->
-    <section class="bg-[#ECF7FF] py-14">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between mb-6">
-          <div>
-            <span
-              class="h-1.5 w-6 rounded-full inline-block bg-gradient-to-r from-[#039BE5] to-[#0F8B63]"
-            ></span>
-            <p
-              class="text-[11px] uppercase tracking-[0.2em] mt-2 text-slate-500"
-            >
-              Testimonials
-            </p>
-            <h2 class="text-2xl font-semibold mt-3">
-              Patient Testimonials
-            </h2>
-          </div>
-
-          <a
-            href="testimonials.html"
-            class="text-sm font-semibold text-[#039BE5] hover:text-[#0F8B63]"
-            >See More →</a
-          >
-        </div>
-
-        <div
-          class="grid md:grid-cols-3 gap-5"
-          data-aos="fade-up"
-        >
-          <!-- Testimonial 1 -->
-          <div
-            class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm p-5"
-          >
-            <p class="font-semibold text-sm">Mr. A.K., 54 yrs</p>
-            <p class="text-xs text-slate-500">Lumbar Disc Herniation</p>
-            <p class="mt-3 text-sm text-slate-700 leading-relaxed">
-              “After the surgery, I was walking normally within weeks. The
-              pain that lasted years disappeared.”
-            </p>
-          </div>
-
-          <!-- Testimonial 2 -->
-          <div
-            class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm p-5"
-          >
-            <p class="font-semibold text-sm">Mrs. S.M., 62 yrs</p>
-            <p class="text-xs text-slate-500">Spinal Stenosis</p>
-            <p class="mt-3 text-sm text-slate-700 leading-relaxed">
-              “I was unable to walk more than a few steps. Now I can manage
-              my daily activities comfortably without constant pain.”
-            </p>
-          </div>
-
-          <!-- Testimonial 3 -->
-          <div
-            class="bg-white border border-[#039BE5]/30 rounded-xl shadow-sm p-5"
-          >
-            <p class="font-semibold text-sm">Mr. R.D., 38 yrs</p>
-            <p class="text-xs text-slate-500">Disc Prolapse</p>
-            <p class="mt-3 text-sm text-slate-700 leading-relaxed">
-              “Minimally invasive surgery helped me return to work quickly.
-              The team guided me through every step of recovery.”
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FLOATING MOBILE CTA -->
-    <a
-      href="book.html"
-      class="fixed bottom-5 right-4 md:hidden inline-flex items-center justify-center px-4 py-2.5 rounded-full
-             text-sm font-semibold text-white bg-[#039BE5] hover:bg-[#0F8B63] shadow-lg
-             transition-transform duration-200 hover:scale-110"
-    >
-      Book Consultation
-    </a>
-
-    <!-- FOOTER -->
-    <footer class="bg-slate-900 text-slate-300 py-12 mt-10">
-      <div
-        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-3 gap-10"
-      >
-        <div>
-          <h3 class="text-white font-semibold text-lg">
-            Dr. Jay Deep Ghosh
-          </h3>
-          <p class="text-sm mt-2 leading-relaxed">
-            Spine Surgeon with 20+ years of expertise and 22,000+ surgeries.
-          </p>
-        </div>
-
-        <div>
-          <h4 class="text-white font-semibold mb-3">Quick Links</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="about.html" class="hover:text-white">About</a></li>
-            <li>
-              <a href="procedures.html" class="hover:text-white"
-                >Procedures</a
-              >
-            </li>
-            <li>
-              <a href="before-after.html" class="hover:text-white"
-                >Before/After</a
-              >
-            </li>
-            <li>
-              <a href="videos.html" class="hover:text-white">Videos</a>
-            </li>
-            <li>
-              <a href="testimonials.html" class="hover:text-white"
-                >Testimonials</a
-              >
-            </li>
-            <li>
-              <a href="book.html" class="hover:text-white"
-                >Book Consultation</a
-              >
-            </li>
+        
+        <div class="expandable-content">
+          <ul class="procedure-list">
+            <li>Slipped disc</li>
+            <li>Scoliosis</li>
+            <li>Spine surgery</li>
+            <li>Back pain / neck pain</li>
+            <li>Endoscopic spine surgery</li>
+            <li>Cervical spondylitis</li>
+            <li>Lumbar spondylosis</li>
+            <li>Kyphosis</li>
+            <li>Spinal cord injury</li>
+            <li>Craniocervical junction problems</li>
+            <li>Spinal tuberculosis</li>
           </ul>
         </div>
+      </article>
 
-        <div>
-          <h4 class="text-white font-semibold mb-3">Clinic</h4>
-          <p class="text-sm leading-relaxed">
-            [Clinic Name]<br />
-            [Street Address Line 1]<br />
-            [City], [State] – [PIN]
-          </p>
+      <article class="expandable-card" onclick="toggleCard(this)">
+        <div class="card-header-content">
+          <div class="icon-circle">
+            <svg class="custom-icon" viewBox="0 0 213.134 213.134" xmlns="http://www.w3.org/2000/svg">
+              <g><path d="M90.063,107.15c6.079,0.627,12.019-1.272,16.505-5.133c3.923,3.377,8.908,5.251,14.209,5.251c0.76,0,1.532-0.04,2.294-0.118c10.153-1.042,18.335-9.157,19.453-19.293c0.78-7.068-1.905-14.098-7.183-18.806c-6.714-5.991-10.564-14.245-10.564-22.646V4c0-2.209-1.791-4-4-4H92.358c-2.209,0-4,1.791-4,4v42.405c0,8.4-3.851,16.655-10.565,22.646c-5.276,4.708-7.962,11.738-7.183,18.807C71.729,97.993,79.909,106.107,90.063,107.15z"/><path d="M146.091,115.97c-0.004-0.036-0.007-0.07-0.01-0.09c-0.421-3.683-3.565-6.46-7.313-6.46c-1.974,0-3.836,0.771-5.243,2.169c-2.578,2.56-5.943,4.17-9.475,4.533c-3.685,0.377-7.33-0.506-10.376-2.515c-2.106-1.389-4.564-2.123-7.106-2.123c-2.543,0-5,0.734-7.105,2.123c-3.047,2.008-6.699,2.894-10.377,2.515c-3.532-0.363-6.897-1.973-9.475-4.533c-1.408-1.398-3.271-2.169-5.244-2.169c-3.748,0-6.893,2.778-7.323,6.551c-0.859,7.787,2.123,15.504,7.977,20.646c7.469,6.561,11.753,15.628,11.753,24.879v47.639c0,2.209,1.791,4,4,4h31.589c2.209,0,4-1.791,4-4v-47.639c0-9.25,4.284-18.318,11.753-24.879C143.969,131.474,146.951,123.756,146.091,115.97z"/></g>
+            </svg>
+          </div>
+          <h3>Orthopaedics</h3>
+          <p class="summary-text">Hip, knee, foot & ankle, upper limb trauma and reconstruction.</p>
+          <span class="chevron"><i class="fa-solid fa-chevron-down"></i></span>
+        </div>
+        
+        <div class="expandable-content">
+          <ul class="procedure-list">
+            <li>Arthritis</li>
+            <li>Pain related problems</li>
+            <li>Knee and joint pain</li>
+            <li>Osteoporosis</li>
+            <li>Joint and knee replacement surgery</li>
+            <li>THR (Total Hip Replacement)</li>
+            <li>TKR (Total Knee Replacement)</li>
+            <li>Rheumatology</li>
+            <li>Orthopedic problems</li>
+            <li>Bone fractures</li>
+            <li>Sports injuries</li>
+            <li>ACL (Anterior Cruciate Ligament) reconstruction</li>
+            <li>Orthopedic trauma</li>
+            <li>Shoulder joint replacement</li>
+            <li>Paediatric orthopedics</li>
+            <li>Hand reconstruction</li>
+            <li>Arthroscopic surgeries</li>
+            <li>Podiatric/foot problems</li>
+          </ul>
+        </div>
+      </article>
 
-          <p class="text-sm mt-3">Phone: +91-XXXXXXXXXX</p>
-          <p class="text-sm">Email: contact@drspineclinic.com</p>
+      <article class="expandable-card" onclick="toggleCard(this)">
+        <div class="card-header-content">
+          <div class="icon-circle">
+            <svg class="custom-icon" viewBox="0 0 458.52 458.52" xmlns="http://www.w3.org/2000/svg">
+              <g><g><g><path d="M218.776,271.586c-23.856,0-44.034,0-44.034,0l15.004,52.377l-29.822,85.226c-3.861,11.037,1.955,23.114,12.991,26.976c11.039,3.862,23.115-1.958,26.976-12.991l32.044-91.579c1.446-4.134,1.575-8.613,0.369-12.823L218.776,271.586z"/><path d="M274.806,271.587c-13.159,0-30.84,0-47.678,0l24.555,48.141l-3.183,95.756c-0.388,11.686,8.771,21.474,20.456,21.863c0.24,0.008,0.478,0.012,0.716,0.012c11.367,0,20.767-9.022,21.147-20.468l3.364-101.215c0.119-3.581-0.672-7.131-2.3-10.323L274.806,271.587z"/><circle cx="257.237" cy="57.342" r="36.182"/><path d="M98.908,255.398h138.153l-30.254-14.663c-2.761-1.338-5.29-3.015-7.559-4.96H98.908c-40.652,0-73.726,33.073-73.726,73.726v108.234c-8.062,0-7.411,0-15.371,0c-5.418,0-9.811,4.393-9.811,9.811c0,5.418,4.393,9.811,9.811,9.811h50.365c5.418,0,9.811-4.393,9.811-9.811c0-5.418-4.393-9.811-9.811-9.811c-8.033,0-7.41,0-15.371,0V309.503C44.806,279.669,69.076,255.398,98.908,255.398z"/><path d="M294.384,224.227l-55.79-27.04l-9.188-67.544l22.601,54.924l17.778,8.617l8.657-56.926c1.798-11.821-6.328-22.86-18.148-24.658l-48.615-7.393c-11.82-1.798-22.86,6.328-24.658,18.148l-14.786,97.232h16.372c-1.452-4.668-1.558-7.661-1.364-9.687l6.982-72.945l10.146,74.585c0.81,5.948,4.541,11.095,9.942,13.713c39.757,19.269,16.838,8.16,64.437,31.231c8.135,3.944,18.166,1.211,23.052-6.706C307.417,240.672,303.883,228.833,294.384,224.227z"/><path d="M448.708,417.737c-8.762,0-7.206,0-15.816,0V309.503c0-40.653-33.073-73.726-73.726-73.726h-37.788c0.864,6.491-0.07,13.288-3.074,19.623h40.862c29.833,0,54.104,24.271,54.104,54.104v108.234c-9.356,0-11.435,0-11.82,0c-0.055,0-0.078,0-0.08,0c-0.213,0-0.926,0-3.026,0c-5.418,0-9.811,4.393-9.811,9.811c0,5.418,4.393,9.811,9.811,9.811h50.365c5.418,0,9.811-4.393,9.811-9.811C458.52,422.13,454.126,417.737,448.708,417.737z"/></g></g></g>
+            </svg>
+          </div>
+          <h3>Rehabilitation</h3>
+          <p class="summary-text">Post-operative protocols, brace guidance, and physiotherapy.</p>
+          <span class="chevron"><i class="fa-solid fa-chevron-down"></i></span>
+        </div>
+        
+        <div class="expandable-content">
+          <ul class="procedure-list">
+            <li>Pain management for musculoskeletal conditions</li>
+            <li>Post-surgical rehabilitation (joint/spine)</li>
+            <li>Mobility improvement after trauma or joint replacement</li>
+            <li>Recovery programs for spinal cord injury</li>
+            <li>Functional restoration for arthritic and orthopedic disorders</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!--PROCEDURES SECTION-->
+
+<section class="section section--alt" id="advanced-procedures">
+    <div class="container">
+        <h2 class="section__title center">Advanced Procedures & Techniques</h2>
+        <p class="section__subtitle center">
+            Dr. Jay Deep Ghosh is known for using several advanced and minimally invasive techniques in both spine and joint surgery, with a strong focus on reducing pain, blood loss, and recovery time for patients.
+        </p>
+
+        <h3 class="procedure-category-title">Advanced Spine Procedures</h3>
+        <div class="advanced-accordion-container">
+
+            <div class="advanced-accordion-item">
+                <button class="advanced-accordion-header" aria-expanded="false" data-target="#miss-content">
+                    Minimally Invasive Spine Surgery (MISS)
+                    <span class="chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                </button>
+                <div id="miss-content" class="advanced-accordion-content">
+                    <div class="procedure-media-grid">
+                        <div class="procedure-text-content">
+                            <p>Uses small incisions, tubular retractors, and specialised instruments to treat conditions like **slipped disc, spinal stenosis, and spondylolisthesis** while preserving muscles and soft tissue.</p>
+                            <p class="procedure-benefits">
+                                Benefits typically include less blood loss, shorter hospital stay, faster mobilisation, and smaller scars compared with conventional open surgery.
+                            </p>
+                            <a href="#" class="btn btn--accent btn--small">More Details on MISS</a>
+                        </div>
+                        
+                        <div class="procedure-media-column">
+                            <div class="media-placeholder procedure-image">
+                                <img src="assets/miss-procedure.jpg" alt="Minimally Invasive Spine Surgery" /> 
+                            </div>
+                            <div class="media-placeholder youtube-embed">
+                                <iframe width="100%" height="auto" src="https://www.youtube.com/embed/YOUR_MISS_VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="advanced-accordion-item">
+                <button class="advanced-accordion-header" aria-expanded="false" data-target="#endoscopic-content">
+                    Endoscopic Spine Surgery
+                    <span class="chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                </button>
+                <div id="endoscopic-content" class="advanced-accordion-content">
+                    <div class="procedure-media-grid">
+                        <div class="procedure-text-content">
+                            <p>Involves inserting a **high‑definition endoscope through a keyhole incision** to visualise and remove herniated disc fragments or decompress pinched nerves, often under local or epidural anaesthesia.</p>
+                            <p class="procedure-benefits">
+                                This technique allows targeted decompression with minimal tissue disruption and is particularly highlighted by Dr. Ghosh in his social media and hospital outreach as “latest minimally invasive spine surgery” for disc prolapse and canal stenosis.
+                            </p>
+                            <a href="#" class="btn btn--accent btn--small">More Details on Endoscopy</a>
+                        </div>
+                        
+                        <div class="procedure-media-column">
+                            <div class="media-placeholder procedure-image">
+                                <img src="assets/endoscopic-procedure.jpg" alt="Endoscopic Spine Surgery" /> 
+                            </div>
+                            <div class="media-placeholder youtube-embed">
+                                <iframe width="100%" height="auto" src="https://www.youtube.com/embed/YOUR_ENDO_VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="advanced-accordion-item">
+                <button class="advanced-accordion-header" aria-expanded="false" data-target="#decompression-content">
+                    Minimally Invasive Decompression and Stabilisation
+                    <span class="chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                </button>
+                <div id="decompression-content" class="advanced-accordion-content">
+                    <div class="procedure-media-grid">
+                        <div class="procedure-text-content">
+                            <p>For lumbar canal stenosis and some traumatic or degenerative instabilities, he uses **MISS approaches with percutaneous screws and rods** to decompress the spinal canal and stabilise segments without large midline exposure.</p>
+                            <p class="procedure-benefits">
+                                These procedures aim to maintain spinal alignment and stability while decreasing postoperative pain and rehabilitation time compared with standard open fusion surgeries.
+                            </p>
+                            <a href="#" class="btn btn--accent btn--small">More Details on Stabilisation</a>
+                        </div>
+                        
+                        <div class="procedure-media-column">
+                            <div class="media-placeholder procedure-image">
+                                <img src="assets/decomp-procedure.jpg" alt="Spinal Decompression & Stabilisation" /> 
+                            </div>
+                            <div class="media-placeholder youtube-embed">
+                                <iframe width="100%" height="auto" src="https://www.youtube.com/embed/YOUR_DECOMP_VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <h3 class="procedure-category-title">Advanced Joint and Orthopaedic Procedures</h3>
+        <div class="advanced-accordion-container">
+
+            <div class="advanced-accordion-item">
+                <button class="advanced-accordion-header" aria-expanded="false" data-target="#arthro-content">
+                    Arthroscopic (Keyhole) Joint Surgery
+                    <span class="chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                </button>
+                <div id="arthro-content" class="advanced-accordion-content">
+                    <div class="procedure-media-grid">
+                        <div class="procedure-text-content">
+                            <p>Uses a **fibre‑optic camera (arthroscope) and micro‑instruments** through tiny portals to treat knee, shoulder, and other joint problems such as meniscal tears, ACL injuries, and shoulder impingement.</p>
+                            <p class="procedure-benefits">
+                                Arthroscopy is emphasised as one of his special interests and is valued for quicker recovery, less postoperative stiffness, and early return to activities.
+                            </p>
+                            <a href="#" class="btn btn--accent btn--small">More Details on Arthroscopy</a>
+                        </div>
+                        
+                        <div class="procedure-media-column">
+                            <div class="media-placeholder procedure-image">
+                                <img src="assets/arthro-procedure.jpg" alt="Arthroscopic Joint Surgery" /> 
+                            </div>
+                            <div class="media-placeholder youtube-embed">
+                                <iframe width="100%" height="auto" src="https://www.youtube.com/embed/YOUR_ARTHRO_VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="advanced-accordion-item">
+                <button class="advanced-accordion-header" aria-expanded="false" data-target="#tkr-content">
+                    Modern Total Knee Replacement (TKR)
+                    <span class="chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                </button>
+                <div id="tkr-content" class="advanced-accordion-content">
+                    <div class="procedure-media-grid">
+                        <div class="procedure-text-content">
+                            <p>Performs contemporary TKR techniques that use **pre‑operative planning, refined soft‑tissue balancing, and high‑performance implants** to restore alignment and function in severe arthritis.</p>
+                            <p class="procedure-benefits">
+                                These replacements are designed for long-term durability and enhanced range of motion, with multimodal pain control and early physiotherapy to fast-track recovery.
+                            </p>
+                            <a href="#" class="btn btn--accent btn--small">More Details on TKR</a>
+                        </div>
+                        
+                        <div class="procedure-media-column">
+                            <div class="media-placeholder procedure-image">
+                                <img src="assets/tkr-procedure.jpg" alt="Total Knee Replacement" /> 
+                            </div>
+                            <div class="media-placeholder youtube-embed">
+                                <iframe width="100%" height="auto" src="https://www.youtube.com/embed/YOUR_TKR_VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="advanced-accordion-item">
+                <button class="advanced-accordion-header" aria-expanded="false" data-target="#thr-content">
+                    Total Hip Replacement (THR)
+                    <span class="chevron"><i class="fa-solid fa-chevron-down"></i></span>
+                </button>
+                <div id="thr-content" class="advanced-accordion-content">
+                    <div class="procedure-media-grid">
+                        <div class="procedure-text-content">
+                            <p>Utilises **advanced bearing surfaces** and cemented or uncemented implants to relieve pain from hip arthritis, avascular necrosis, or fracture‑related damage.</p>
+                            <p class="procedure-benefits">
+                                Modern THR techniques aim to preserve muscle, improve stability, and allow patients to walk with support within a day or two after surgery in most routine cases.
+                            </p>
+                            <a href="#" class="btn btn--accent btn--small">More Details on THR</a>
+                        </div>
+                        
+                        <div class="procedure-media-column">
+                            <div class="media-placeholder procedure-image">
+                                <img src="assets/thr-procedure.jpg" alt="Total Hip Replacement" /> 
+                            </div>
+                            <div class="media-placeholder youtube-embed">
+                                <iframe width="100%" height="auto" src="https://www.youtube.com/embed/YOUR_THR_VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> </div>
+</section>
+
+  <!-- REPLACED Do's & Don'ts WITH BEFORE & AFTER -->
+ <section class="section real-clinical-outcomes-section bg-image-section">
+  <div class="container">
+    <div class="center mb-5">
+      <h2 class="section__title">Real Clinical Outcomes</h2>
+      <p class="section__subtitle">
+        Visible transformation. Tap or hover over the image to instantly view the result.
+      </p>
+    </div>
+
+    <div class="clinical-grid">
+
+      <div class="clinical-card">
+        <div class="clinical-card__header">
+          <h3>Adolescent Idiopathic Scoliosis</h3>
+          <span class="badge">Spine Deformity</span>
+        </div>
+        
+        <div class="fading-frame" data-toggle-duration="3500">
+          <img src="assets/after3.jpg" alt="After Scoliosis Surgery" class="img-after">
+          <img src="assets/before3.jpg" alt="Before Scoliosis Surgery" class="img-before">
+          
+          <span class="label-tag tag-before">Before</span>
+          <span class="label-tag tag-after">After</span>
+
+          <div class="toggle-hint">
+            <i class="fa-solid fa-hand-pointer"></i> Tap/Hover to switch
+          </div>
+        </div>
+
+        <div class="clinical-card__footer">
+          <p class="procedure-name">Posterior Spinal Fusion.</p> 
+          <p class="case-note">Highly successful correction of Cobb angle with balanced shoulders.</p>
+          <a href="appointment.html" class="btn btn--sm btn--green-solid w-100 mt-16">Know More</a>
         </div>
       </div>
 
-      <div class="text-center text-xs text-slate-500 mt-10">
-        © Dr. Jay Deep Ghosh. All rights reserved.
-      </div>
-    </footer>
+      <div class="clinical-card">
+        <div class="clinical-card__header">
+          <h3>Severe Scoliosis</h3>
+          <span class="badge">Spine Deformity</span>
+        </div>
+        
+        <div class="fading-frame" data-toggle-duration="4000">
+          <img src="assets/after2.jpg" alt="After Total Knee Replacement" class="img-after">
+          <img src="assets/before2.jpg" alt="Before Total Knee Replacement" class="img-before">
+          
+          <span class="label-tag tag-before">Before</span>
+          <span class="label-tag tag-after">After</span>
+          
+          <div class="toggle-hint">
+            <i class="fa-solid fa-hand-pointer"></i> Tap/Hover to switch
+          </div>
+        </div>
 
-    <!-- JS -->
-    <script>
-      AOS.init();
-      document.getElementById("menu-btn").onclick = () =>
-        document.getElementById("mobile-nav").classList.toggle("hidden");
-    </script>
-  </body>
+        <div class="clinical-card__footer">
+          <p class="procedure-name">Posterior Spinal Fusion.</p>
+          <p class="case-note">Highly successful correction of Cobb angle with balanced shoulders.</p>
+          <a href="appointment.html" class="btn btn--sm btn--green-solid w-100 mt-16">Know More</a>
+        </div>
+      </div>
+
+      <div class="clinical-card">
+        <div class="clinical-card__header">
+          <h3>Crush Foot Injury</h3>
+          <span class="badge">Trauma</span>
+        </div>
+        
+        <div class="fading-frame" data-toggle-duration="3000">
+          <img src="assets/after5.jpg" alt="After Crush Foot" class="img-after">
+          <img src="assets/before5.jpg" alt="Before Crush Foot" class="img-before">
+          
+          <span class="label-tag tag-before">Before</span>
+          <span class="label-tag tag-after">After</span>
+          
+          <div class="toggle-hint">
+            <i class="fa-solid fa-hand-pointer"></i> Tap/Hover to switch
+          </div>
+        </div>
+
+        <div class="clinical-card__footer">
+          <p class="procedure-name">Crush Foot Injury.</p>
+          <p class="case-note">Limb‑salvage for a mangled foot is usually done in stages: first emergency surgery to clean the wound thoroughly, remove dead tissue, and stabilize the bones with an external fixator or wires so blood flow and basic limb structure are preserved.</p>
+          <a href="appointment.html" class="btn btn--sm btn--green-solid w-100 mt-16">Know More</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <!-- Callout / Review QR style block --> <!--REMOVED-->
+
+
+
+  <!-- Testimonials -->
+
+<section class="section testimonials-proof-section">
+    <div class="testi-bg-image-wrapper"></div>
+
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h2 class="section__title text-primary">Patient Trust & Success Stories</h2>
+            <p class="section__subtitle">See what our patients are saying about their successful outcomes.</p>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                
+                <div class="testimonial-card written-card p-4 mb-4">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="quote">"The chronic back pain that had plagued me for years is finally gone. Dr. Ghosh’s precise diagnosis and tailored treatment plan gave me my life back. I highly recommend him and his team."</p>
+                    <div class="user-profile">
+                        <h4 class="mb-0">— Sumit K.</h4>
+                    </div>
+                </div>
+
+                <div class="testimonial-card written-card p-4 mb-4">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="quote">"From consultation to recovery, the care was exceptional. The surgery was flawless, and the entire team was professional and compassionate throughout the whole process."</p>
+                    <div class="user-profile">
+                        <h4 class="mb-0">— Anjali R.</h4>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card written-card p-4 mb-0">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="quote">"My shoulder replacement surgery was a success. I appreciate the clarity and confidence Dr. Ghosh instilled in me throughout the entire process. I'm pain-free now."</p>
+                    <div class="user-profile">
+                        <h4 class="mb-0">— Ganesh D.</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                
+                <div class="video-testimonial-card p-3 mb-4">
+                    <div class="ratio ratio-16x9">
+                        <iframe 
+                            src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID_1?rel=0" 
+                            title="Video Testimonial 1" 
+                            allowfullscreen 
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="video-card-footer mt-3">
+                        <p class="mb-0 text-center text-muted">Interview with Patient Subodh S. (Spinal Fusion)</p>
+                    </div>
+                </div>
+
+                <div class="video-testimonial-card p-3 mb-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe 
+                            src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID_2?rel=0" 
+                            title="Video Testimonial 2" 
+                            allowfullscreen 
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="video-card-footer mt-3">
+                        <p class="mb-0 text-center text-muted">Interview with Patient Neha P. (Knee Replacement)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="accent-bar-wrapper mt-5 mb-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <a href="testimonials.html#written" class="btn btn--primary btn-lg">Read More</a>
+                </div>
+                <div class="col-lg-6 text-center text-lg-end">
+                    <a href="testimonials.html#video" class="btn btn--primary btn-lg">View More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Share -->
+  <section class="section section--tight center">
+    <div class="container">
+      <h3>Share this page</h3>
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container grid grid--3 footer__grid">
+      <div>
+        <div class="foot-brand">
+          <img src="https://dummyimage.com/72x72/ddd/555.png&text=JG" alt="">
+          <div>
+            <strong>DR. JAY DEEP GHOSH</strong><br>
+            <small>Orthopaedic Spine Surgeon</small>
+          </div>
+        </div>
+        <div class="foot-badge">
+          <i class="fa-solid fa-foot"></i>
+        </div>
+        <p class="legal-links">
+          <a href="#">Terms & Conditions</a> · <a href="#">Privacy Policy</a>
+        </p>
+      </div>
+
+      <div>
+        <h4>Visit Us</h4>
+        <p>Registered Office<br>Apollo Hospitals, Guwahati</p>
+        <div class="map">
+          <img src="https://maps.googleapis.com/maps/api/staticmap?center=Apollo+Hospitals+Guwahati&zoom=14&size=500x220&key=AIzaSyDummy" alt="Map (replace with your embed)">
+        </div>
+      </div>
+
+      <div>
+        <h4>Contact Us</h4>
+        <form class="contact-form">
+          <input type="text" placeholder="Name" required>
+          <input type="email" placeholder="Email" required>
+          <input type="tel" placeholder="Phone No">
+          <textarea rows="3" placeholder="Message"></textarea>
+          <button class="btn btn--accent" type="submit">Send enquiry</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container flex align-center space-between">
+        <div class="foot-social">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <small>© <span id="yr"></span> Dr. Jay Deep Ghosh. All Rights Reserved | Developed by <a href="#" rel="nofollow">YourName</a></small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>

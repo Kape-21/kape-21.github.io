@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book Appointment | Dr Jay Deep Ghosh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-appointment">
+  <header class="header header--simple">
+    <div class="container flex align-center space-between">
+      <a class="logo flex align-center" href="index.html">
+        <img src="https://dummyimage.com/44x44/ddd/555.png&text=JG" alt="Logo" class="logo__img">
+        <div class="logo__text">
+          <strong>Dr Jay Deep Ghosh</strong>
+          <small>Orthopaedic Spine Surgeon</small>
+        </div>
+      </a>
+      <a href="index.html" class="btn btn--ghost"><i class="fa-solid fa-arrow-left"></i> Back</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container grid grid--2 stack-on-mobile">
+      <div>
+        <h1 class="h1">Book an Appointment</h1>
+        <p>Please fill the form and our team will contact you to confirm your visit schedule.</p>
+        <ul class="icon-list mt-16">
+          <li><i class="fa-solid fa-hospital"></i> Apollo Hospitals, Guwahati</li>
+          <li><i class="fa-solid fa-clock"></i> Mon–Sat: 10:00–18:00</li>
+          <li><i class="fa-solid fa-phone"></i> +91-XXXXXXXXXX</li>
+        </ul>
+      </div>
+      <form class="appt-form" onsubmit="event.preventDefault(); alert('Thank you! We will reach you shortly.'); this.reset();">
+        <div class="grid grid--2">
+          <input type="text" placeholder="Full Name" required>
+          <input type="tel" placeholder="Phone Number" required>
+          <input type="email" placeholder="Email (optional)">
+          <input type="text" placeholder="City">
+        </div>
+        <div class="grid grid--2">
+          <select required>
+            <option value="" disabled selected>Choose Concern</option>
+            <option>Spine</option>
+            <option>Hip/Knee</option>
+            <option>Foot & Ankle</option>
+            <option>Other Orthopaedic</option>
+          </select>
+          <input type="date" required>
+        </div>
+        <textarea rows="5" placeholder="Briefly describe your concern"></textarea>
+        <button class="btn btn--accent w-100" type="submit">Submit Request</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer footer--minimal">
+    <div class="container center">
+      <small>© <span id="yr"></span> Dr. Jay Deep Ghosh</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
