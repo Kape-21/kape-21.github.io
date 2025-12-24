@@ -1,1 +1,1 @@
-This is the old site design which i am either replacing or overriding with the polished version
+THIS IS THE MAIN VERSION
