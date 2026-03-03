@@ -25,6 +25,46 @@ document.querySelectorAll('.magnetic').forEach(btn => {
     });
 });
 
+// --- Dynamic Copyright Year ---
+const yearSpan = document.getElementById('current-year');
+if (yearSpan) {
+    yearSpan.innerText = new Date().getFullYear();
+}
+
+// --- Services Accordion Logic ---
+document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const card = header.parentElement;
+        const content = card.querySelector('.accordion-content');
+        const isActive = card.classList.contains('active');
+
+        // Close all currently open cards
+        document.querySelectorAll('.service-card').forEach(c => {
+            c.classList.remove('active');
+            c.querySelector('.accordion-content').style.maxHeight = null;
+        });
+
+        // If the clicked card wasn't active, open it
+        if (!isActive) {
+            card.classList.add('active');
+            content.style.maxHeight = content.scrollHeight + "px";
+            
+            // Refresh ScrollTrigger to recalculate page height after accordion opens
+            setTimeout(() => ScrollTrigger.refresh(), 400);
+        }
+    });
+});
+
+// Open the first accordion by default on page load
+window.addEventListener('DOMContentLoaded', () => {
+    const firstServiceCard = document.querySelector('.service-card');
+    if (firstServiceCard) {
+        firstServiceCard.classList.add('active');
+        const firstContent = firstServiceCard.querySelector('.accordion-content');
+        firstContent.style.maxHeight = firstContent.scrollHeight + "px";
+    }
+});
+
 // --- Mobile Timeline Toggle ---
 const toggleHistoryBtn = document.getElementById('toggle-history');
 if(toggleHistoryBtn) {
